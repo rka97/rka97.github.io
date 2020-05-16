@@ -20,6 +20,7 @@ output:
   border-radius: 5px;
 }
 
+
 /* Header and Footer */
 .menu li { display: inline-block; }
 .article-meta, .menu a {
