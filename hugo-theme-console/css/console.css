@@ -1,3 +1,10 @@
+code.has-jax {
+    -webkit-font-smoothing: antialiased;
+    background: inherit !important;
+    border: none !important;
+    font-size: 100%;
+}
+
 @font-face {
     font-family: 'Roboto Mono';
     src: url('../font/RobotoMono-Regular.ttf') format('truetype');
@@ -30,9 +37,42 @@
     text-rendering: optimizeLegibility;
 }
 
+@font-face {
+    font-family: 'Source Sans Pro';
+    src: url('../font/SourceSansPro-Regular.ttf') format('truetype');
+    font-style: normal;
+    font-weight: 400;
+    text-rendering: optimizeLegibility;
+}
+
+@font-face {
+    font-family: 'Source Sans Pro';
+    src: url('../font/SourceSansPro-Italic.ttf') format('truetype');
+    font-style: italic;
+    font-weight: 400;
+    text-rendering: optimizeLegibility;
+}
+
+@font-face {
+    font-family: 'Source Sans Pro';
+    src: url('../font/SourceSansPro-Bold.ttf') format('truetype');
+    font-style: normal;
+    font-weight: 700;
+    text-rendering: optimizeLegibility;
+}
+
+@font-face {
+    font-family: 'Source Sans Pro';
+    src: url('../font/SourceSansPro-BoldItalic.ttf') format('truetype');
+    font-style: italic;
+    font-weight: 700;
+    text-rendering: optimizeLegibility;
+}
+
+
 :root {
     --global-font-size: 16px;
-    --global-font-color: #444;
+    --global-font-color: #000;
     --mono-font-stack: Roboto Mono, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
     --font-stack: Roboto Mono, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
     --global-line-height: 1.6em;
@@ -44,7 +84,7 @@
 @media only screen and (max-width: 850px) {
     :root {
         --global-font-size: 14px;
-        --global-font-color: #444;
+        --global-font-color: #000;
         --global-line-height: 1.6em;
         --page-width: 70em;
     }
@@ -99,7 +139,7 @@ h1 {
 
 .content-column-content p,
 .content-column-content li {
-    color: #666;
+    color: #000;
 }
 
 .btn-ghost {
@@ -195,23 +235,23 @@ figure {
 
 .posts-list {
     position: relative;
-    padding-left: 150px;
+    padding-left: 130px;
     top: 0;
-    margin-top: 21px;
 }
 
-.post h1 {
+.post h1, .post h2 {
     padding-top: 0;
+    margin: 0;
+    margin-bottom: 5px;
 }
 
 .posts-list .date {
     display: inline-block;
     position: absolute;
     left: 0px;
-    width: 150px;
+    width: 130px;
     z-index: 400;
-    font-weight: bold;
-    padding-top: 3px;
+    padding-top: 0;
 }
 
 @media only screen and (max-width: 850px) {
@@ -254,10 +294,9 @@ figure {
         position: relative;
         padding-left: 0;
         top: 0;
-        margin-top: 21px;
     }
 
-    .post h1 {
+    .post h1, .post h2 {
         padding-top: 0;
     }
 
@@ -268,7 +307,7 @@ figure {
         width: 150px;
         z-index: 400;
         font-weight: bold;
-        padding-top: 3px;
+        padding-top: 0;
         display: none;
     }
 
@@ -278,3 +317,4 @@ figure {
         padding-top: 5px;;
     }
 }
+

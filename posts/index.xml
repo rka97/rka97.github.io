@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Ahmed&#39;s corner</title>
+    <link>https://rka97.github.io/posts/</link>
+    <description>Recent content in Posts on Ahmed&#39;s corner</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="https://rka97.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>High-dimensional probability</title>
+      <link>https://rka97.github.io/posts/20210711211001-high_dimensional_probability/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://rka97.github.io/posts/20210711211001-high_dimensional_probability/</guid>
+      <description>This worksheet contains my literature notes and solutions for (Vershynin 2018).
+ Chapter 1: Preliminaries on random variable 1.1: Basic quantities associated with random variables In this section we recall some basic quantities associated with random variables.
+ We denote by \(\ec{X}\) the mean of \(X\) and by \(\Var(X) \eqdef \ecn{X - \ec{X}}\) the variance of \(X\).
+ A quantity that describes probability distributions is the moment-generating function of \(X\), defined as:</description>
+    </item>
+    
+  </channel>
+</rss>
