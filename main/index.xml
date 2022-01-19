@@ -12,9 +12,9 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://rka97.github.io/main/about/</guid>
-      <description>akregeb at gmail dot com
-Welcome to my tiny corner of the internet! I&amp;rsquo;m Ahmed, I work on optimization and machine learning. I have a Bachelor&amp;rsquo;s degree in Computer Engineering from Cairo University, Egypt. I&amp;rsquo;m (hopefully) going to join Princeton&amp;rsquo;s ECE department as a Ph.D. student starting next year.
-I was fortunate to intern in the group of Prof. Peter Richtárik at KAUST in the summers of 2019/2020, where I worked on the distributed &amp;amp; stochastic optimization.</description>
+      <description>ahmed . khaled @ princeton . edu
+Welcome to my tiny corner of the internet! I&amp;rsquo;m Ahmed, I work on optimization and machine learning. I&amp;rsquo;m a first-year Ph.D. student in the ECE department at Princeton University. I have a Bachelor&amp;rsquo;s degree in Computer Engineering from Cairo University, Egypt.
+Before joining Princeton, I was fortunate to intern in the group of Prof. Peter Richtárik at KAUST in the summers of 2019/2020, where I worked on the distributed &amp;amp; stochastic optimization.</description>
     </item>
     
     <item>
@@ -24,7 +24,7 @@ I was fortunate to intern in the group of Prof. Peter Richtárik at KAUST in the
       
       <guid>https://rka97.github.io/main/papers/</guid>
       <description>(In reverse order of preparation)
- Proximal and Federated Random Reshuffling Preprint (2021), with Konstantin Mishchenko and Peter Richtárik. (bibtex). Unified Analysis of Stochastic Gradient Methods for Composite Convex and Smooth Optimization Preprint (2020), with Othmane Sebbouh, Nicolas Loizou, Robert M. Gower, and Peter Richtárik. (bibtex). Random Reshuffling: Simple Analysis with Vast Improvements Advances in Neural Information Processing Systems 33 (NeurIPS 2020), with Konstantin Mishchenko and Peter Richtárik. (bibtex). Better Theory for SGD in the Nonconvex World Preprint (2020), with Peter Richtárik.</description>
+ FLIX: A Simple and Communication-Efficient Alternative to Local Methods in Federated Learning To appear in AISTATS 2022, with Elnur Gasanov, Samuel Horváth, and Peter Richtárik. (bibtex). Proximal and Federated Random Reshuffling Preprint (2021), with Konstantin Mishchenko and Peter Richtárik. (bibtex). Unified Analysis of Stochastic Gradient Methods for Composite Convex and Smooth Optimization Preprint (2020), with Othmane Sebbouh, Nicolas Loizou, Robert M. Gower, and Peter Richtárik.</description>
     </item>
     
     <item>
