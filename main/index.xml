@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="https://www.w3.org/2005/Atom">
   <channel>
     <title>Mains on Ahmed&#39;s corner</title>
-    <link>https://rka97.github.io/main/</link>
+    <link>https://www.akhaled.org/main/</link>
     <description>Recent content in Mains on Ahmed&#39;s corner</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="https://rka97.github.io/main/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language><atom:link href="https://www.akhaled.org/main/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>About</title>
-      <link>https://rka97.github.io/main/about/</link>
+      <link>https://www.akhaled.org/main/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://rka97.github.io/main/about/</guid>
+      <guid>https://www.akhaled.org/main/about/</guid>
       <description>ahmed . khaled @ princeton . edu
 Welcome to my tiny corner of the internet! I&amp;rsquo;m Ahmed, I work on optimization and machine learning. I&amp;rsquo;m a first-year Ph.D. student in the ECE department at Princeton University. I have a Bachelor&amp;rsquo;s degree in Computer Engineering from Cairo University, Egypt.
 Before joining Princeton, I was fortunate to intern in the group of Prof. Peter Richtárik at KAUST in the summers of 2019/2020, where I worked on the distributed &amp;amp; stochastic optimization.</description>
@@ -19,20 +19,20 @@ Before joining Princeton, I was fortunate to intern in the group of Prof. Peter 
     
     <item>
       <title>Papers</title>
-      <link>https://rka97.github.io/main/papers/</link>
+      <link>https://www.akhaled.org/main/papers/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://rka97.github.io/main/papers/</guid>
+      <guid>https://www.akhaled.org/main/papers/</guid>
       <description>(In reverse order of preparation)
  FLIX: A Simple and Communication-Efficient Alternative to Local Methods in Federated Learning To appear in AISTATS 2022, with Elnur Gasanov, Samuel Horváth, and Peter Richtárik. (bibtex). Proximal and Federated Random Reshuffling Preprint (2021), with Konstantin Mishchenko and Peter Richtárik. (bibtex). Unified Analysis of Stochastic Gradient Methods for Composite Convex and Smooth Optimization Preprint (2020), with Othmane Sebbouh, Nicolas Loizou, Robert M. Gower, and Peter Richtárik.</description>
     </item>
     
     <item>
       <title>Talks</title>
-      <link>https://rka97.github.io/main/talks/</link>
+      <link>https://www.akhaled.org/main/talks/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://rka97.github.io/main/talks/</guid>
+      <guid>https://www.akhaled.org/main/talks/</guid>
       <description> On the Convergence of Local SGD on Identical and Heterogeneous Data Federated Learning One World Seminar (2020). Video and Slides.  </description>
     </item>
     
