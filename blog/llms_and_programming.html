@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2024-03-12 Tue 22:28 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>LLMs and programming</title>
+<meta name="author" content="Ahmed Khaled" />
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">LLMs and programming</h1>
+<p>
+I wrote this blog post after reading <a href="https://twitter.com/fchollet/status/1767674774107611137">this tweet by François Chollet</a>. Originally, I wanted to write a few tweets but realized afterwards that I actually want to write a lot more than would fit into Twitter&rsquo;s maximum tweet lengths. The context for the tweet and this blog post is that a startup recently gave a demo of an <a href="https://www.bloomberg.com/news/newsletters/2024-03-12/cognition-ai-s-devin-assistant-can-build-websites-videos-from-a-prompt">&ldquo;AI software engineer&rdquo;</a> which could perform a few nontrivial programming tasks. As of the time of writing, the tweet thread read:
+</p>
+
+<blockquote>
+<p>
+If you could fully automate software engineering (my job), I think that would be great, since I could then move on to higher-leverage things. Making software is a means to an end, not the end (software is different from art in that sense).
+</p>
+
+<p>
+However I have not yet seen any signs that we&rsquo;re going to be able to automate more than an infinitesimal fraction of my job &#x2013; not even &ldquo;this might work someday maybe if $100B gets invested in the area and if we&rsquo;re very lucky&rdquo; type of signs. I wish!
+</p>
+
+<p>
+The thing is, software engineering is not about copy/pasting code. Software engineering is the development and manipulation of mental models of problems and their solutions. It&rsquo;s thinking and problem solving.
+</p>
+
+<p>
+If you had a machine that could craft mental models, you&rsquo;d have AGI.
+</p>
+
+<p>
+There&rsquo;s a lot of confusion in this area, because many people are under the impression that software is in fact about copy/pasting random code snippets &#x2013; which of course sounds highly automatable if you have an interpolative database of all software ever written.
+</p>
+
+<p>
+And maybe for some devs that&rsquo;s what it is! But the way I see it, that kind of development is to software engineering what boilerplate copyediting is to storytelling.
+</p>
+
+<p>
+Code is largely worthless, more of a liability than an asset. Problem-solving is where the value is. <a href="https://twitter.com/fchollet/status/1767676266462040443">(source).</a>
+</p>
+</blockquote>
+
+<p>
+Now, I&rsquo;m not entirely certain if this sentiment will withstand the test of time. While I believe that for humans, programming is equivalent to a relatively high degree of intelligence, I also think that AIs don&rsquo;t necessarily need to reach that level, or at least, their current trajectory of intelligence (which likely falls short of &ldquo;AGI,&rdquo; whatever that means) will not require such high intelligence. This is because LLM intelligence is quite peculiar and superhuman in certain areas. With long context lengths (i.e., 200k+), AIs can juggle far more things than humans can. As humans, we are fairly memory-limited; we can only think of a limited number of things at one time and have to rely on less reliable long-term memory abstractions for the rest. An LLM with a sufficiently long context does not have to deal with any of that. An example of this is translation: a recent demo of Gemini showcased it translating the Kalamang language (which it wasn&rsquo;t trained on) just as well as a human who spent twenty hours with the same 573-page book and dictionary. It accomplished this in mere minutes. This sort of behavior is intelligent but in a way that is completely alien to how humans learn and carry out translation.
+</p>
+
+<p>
+A more concrete hypothetical: if we reach the point where we can pass the entire Linux kernel source code into an LLM&rsquo;s context, how many mental models or abstractions does it really need to use to fix a bug or write code that implements a feature? I am genuinely uncertain about that. It is very alien for us humans to imagine being able to juggle this magnitude of complexity right in our heads or what it might enable AI to do, even without &ldquo;AGI.&rdquo; In any case, the demonstrations we have today strongly indicate that this is a capability AI has over humans. Of course, all of this rests on the assumption that we&rsquo;ll be able to scale the context length of these models to, at some point, hold 27 million lines of code. This is a formidable problem, but I have not seen any indicators that scaling will stop. LLMs have already grown by more than three orders of magnitude in the span of a few years, and they might continue to grow like that.
+</p>
+
+<p>
+Nobody can predict the future, and I think nobody my age or older envisioned this situation when starting a degree in software engineering. It is normal for many engineers to experience anxiety over this: software engineering takes a long time to learn and is such a hyperspecialized endeavor. If it is automated, switching to other jobs will be challenging. Of course, various other jobs have been automated away, and the people who worked these jobs undoubtedly felt anxiety while this process occurred—automation has mostly worked out for the better for humanity, as we would never be able to support six billion humans on this planet without it. I enjoy programming, and one of the main reasons I appreciate my research area is that I get to do two things I love: programming and mathematics. I strongly believe automation is, in the aggregate, good for us, but on a personal level, I still can&rsquo;t help but feel anxious about this. If software engineer isn&rsquo;t automated, as the tweet suggests, I think I might be a lot less anxious about the future.
+</p>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Ahmed Khaled</p>
+<p class="date">Created: 2024-03-12 Tue 22:28</p>
+</div>
+</body>
+</html>
