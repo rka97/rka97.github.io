@@ -18,7 +18,7 @@ In the past, I interned at Google DeepMind in 2024 and at Meta AI research in su
 
 
 3. [The Road Less Scheduled](https://arxiv.org/abs/2405.15682)  
-   NeurIPS 2024 Oral, with [Aaron Defazio](https://www.aarondefazio.com/), [Xingyu (Alice) Yang](https://x.com/alicey_ang), [Harsh Mehta](https://scholar.google.com/citations?user=murJPNoAAAAJ&hl=en), [Konstantin Mishchenko](https://konstmish.com), and [Ashok Cutkosky](https://ashok.cutkosky.com/). {{< bibtex filename="roadlessscheduled.bib" >}}
+   NeurIPS 2024 Oral, with [Aaron Defazio](https://www.aarondefazio.com/), [Xingyu (Alice) Yang](https://x.com/alicey_ang), [Harsh Mehta](https://scholar.google.com/citations?user=murJPNoAAAAJ&hl=en), [Konstantin Mishchenko](https://konstmish.com), and [Ashok Cutkosky](https://ashok.cutkosky.com/). {{< bibtex filename="road.bib" >}}
 
 6. [Federated Optimization Algorithms with Random Reshuffling and Gradient Compression](https://arxiv.org/abs/2206.07021)  
    NeurIPS 2024, *with [Abdurakhmon Sadiev](https://scholar.google.com/citations?user=R-xZRIAAAAAJ&hl=ru), [Grigory Malinovsky](https://grigory-malinovsky.github.io/), [Eduard Gorbunov](https://eduardgorbunov.github.io/), [Igor Sokolov](https://scholar.google.com/citations?user=OBbPecwAAAAJ&hl=en), [Konstantin Burlachenko](https://burlachenkok.github.io/), and [Peter Richtárik](https://richtarik.org/index.html)*. {{< bibtex filename="sadiev22fedqrr.bib" >}}
