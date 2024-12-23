@@ -75,4 +75,4 @@ In the past, I interned at Google DeepMind in 2024 and at Meta AI research in su
 # Talks
 
 1. [On the Convergence of Local SGD on Identical and Heterogeneous Data](https://sites.google.com/view/one-world-seminar-series-flow/archive?authuser=0#h.azhfwca3oax9)  
-   Federated Learning One World Seminar (2020). [Video](https://www.youtube.com/watch?v=6ThWeKQyp8k&feature=emb_title) and [Slides](/bibs/FLOW_LocalSGD.pdf)
+   Federated Learning One World Seminar (2020). [Video](https://www.youtube.com/watch?v=6ThWeKQyp8k&feature=emb_title) and [Slides](/pdfs/FLOW_LocalSGD.pdf)
