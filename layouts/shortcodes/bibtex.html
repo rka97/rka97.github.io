@@ -1,0 +1,133 @@
+{{ $filepath := printf "static/bibs/%s" (.Get "filename") }}
+{{ $content := readFile $filepath }}
+<div class="bibtex-container">
+    <a class="bibtex-link" onclick="toggleBibtex(this)">[bibtex]</a>
+    <div class="bibtex" style="display: none;">
+        <div class="bibtex-header">
+            <button onclick="copyBibtex(this)" class="terminal-btn">Copy to Clipboard</button>
+            <button onclick="downloadBibtex(this, '{{ .Get "filename" }}')" class="terminal-btn">Download .bib</button>
+            <button onclick="toggleBibtex(this.closest('.bibtex').previousElementSibling)" class="terminal-btn">Close</button>
+        </div>
+        <div class="terminal-box">
+            <pre><code class="bibtex-content">{{ $content }}</code></pre>
+        </div>
+    </div>
+</div>
+
+<style>
+.bibtex-link {
+    cursor: pointer;
+    color: #42a5f5;
+    display: inline;  /* Make the link inline */
+    margin-left: 4px; /* Small spacing from previous text */
+}
+
+.bibtex-container {
+    display: inline;  /* Make container inline */
+}
+
+.bibtex {
+    margin-top: 10px; /* Space between text and bibtex content when expanded */
+}
+
+.bibtex-header {
+    margin: 10px 0;
+    display: flex;
+    gap: 10px;
+}
+
+.terminal-btn {
+    background: #fff;
+    color: #000;
+    border: 1px solid #000;
+    padding: 5px 15px;
+    cursor: pointer;
+    font-family: monospace;
+}
+
+.terminal-btn:hover {
+    background: #eee;
+}
+
+.terminal-box {
+    background: #fff;
+    border: 1px solid #000;
+    padding: 10px;
+    margin: 5px 0;
+    width: 100ch;  /* Limit width to 120 characters */
+}
+
+.terminal-box pre {
+    margin: 0;
+    white-space: pre-wrap;
+    word-break: break-all;
+    overflow-wrap: break-word;
+}
+
+
+.toast-notification {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: 1px solid #666;
+    opacity: 0;
+    transition: opacity 0.3s;
+    font-family: monospace;
+}
+
+.toast-notification.show {
+    opacity: 1;
+}
+</style>
+
+<script>
+function toggleBibtex(element) {
+    console.log('Toggle function called');
+    const bibtexDiv = element.nextElementSibling;
+    console.log('Current display:', bibtexDiv.style.display);
+    if (bibtexDiv.style.display === 'none') {
+        bibtexDiv.style.display = 'block';
+    } else {
+        bibtexDiv.style.display = 'none';
+    }
+}
+
+if (!document.getElementById('toast')) {
+    const toast = document.createElement('div');
+    toast.id = 'toast';
+    toast.className = 'toast-notification';
+    document.body.appendChild(toast);
+}
+
+function showToast(message) {
+    const toast = document.getElementById('toast');
+    toast.textContent = message;
+    toast.classList.add('show');
+    setTimeout(() => {
+        toast.classList.remove('show');
+    }, 2000);
+}
+
+function copyBibtex(btn) {
+    const bibtexContent = btn.closest('.bibtex').querySelector('.bibtex-content').textContent;
+    navigator.clipboard.writeText(bibtexContent).then(() => {
+        showToast('Copied to clipboard');
+    });
+}
+
+function downloadBibtex(btn, filename) {
+    const bibtexContent = btn.closest('.bibtex').querySelector('.bibtex-content').textContent;
+    const blob = new Blob([bibtexContent], { type: 'text/plain' });
+    const url = window.URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = filename;
+    document.body.appendChild(a);
+    a.click();
+    window.URL.revokeObjectURL(url);
+    document.body.removeChild(a);
+}
+</script>
