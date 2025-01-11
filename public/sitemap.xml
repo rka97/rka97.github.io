@@ -4,41 +4,34 @@
     
         
         <url>
-            <loc>http://localhost:1313/</loc>
+            <loc>https://www.akhaled.net/</loc>
             <lastmod>2024-12-23T01:22:42-05:00</lastmod>
         </url>
         
     
         
         <url>
-            <loc>http://localhost:1313/blog/</loc>
+            <loc>https://www.akhaled.net/blog/</loc>
             <lastmod>2024-12-23T01:22:42-05:00</lastmod>
         </url>
         
     
         
         <url>
-            <loc>http://localhost:1313/blog/posts/the_future/</loc>
+            <loc>https://www.akhaled.net/blog/posts/the_future/</loc>
             <lastmod>2024-12-23T01:22:42-05:00</lastmod>
         </url>
         
     
         
         <url>
-            <loc>http://localhost:1313/blog/useless_heralds/</loc>
-            <lastmod>2024-12-23T01:22:42-05:00</lastmod>
+            <loc>https://www.akhaled.net/categories/</loc>
         </url>
         
     
         
         <url>
-            <loc>http://localhost:1313/categories/</loc>
-        </url>
-        
-    
-        
-        <url>
-            <loc>http://localhost:1313/tags/</loc>
+            <loc>https://www.akhaled.net/tags/</loc>
         </url>
         
     
