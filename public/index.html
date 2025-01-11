@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-us">
 <head>
-	<meta name="generator" content="Hugo 0.140.0"><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+	<meta name="generator" content="Hugo 0.140.1"><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Ahmed&#39;s corner/</title>
@@ -66,84 +66,2614 @@
 <ol start="2">
 <li>
 <p><a href="https://arxiv.org/abs/2403.04081">Directional Smoothness and Gradient Methods: Convergence and Adaptivity</a><br>
-NeurIPS 2024, <em>with <a href="https://cs.stanford.edu/~amishkin/">Aaron Mishkin</a>, <a href="https://www.cs.princeton.edu/~yuanhao/">Yuanhao Wang</a>, <a href="https://www.aarondefazio.com/">Aaron Defazio</a>, and <a href="https://gowerrobert.github.io/">Robert M. Gower</a></em>. <a href="/static/dirsmooth.bib">(bibtex)</a></p>
+NeurIPS 2024, <em>with <a href="https://cs.stanford.edu/~amishkin/">Aaron Mishkin</a>, <a href="https://www.cs.princeton.edu/~yuanhao/">Yuanhao Wang</a>, <a href="https://www.aarondefazio.com/">Aaron Defazio</a>, and <a href="https://gowerrobert.github.io/">Robert M. Gower</a></em>. 
+
+<div class="bibtex-container">
+    <a class="bibtex-link" onclick="toggleBibtex(this)">[bibtex]</a>
+    <div class="bibtex" style="display: none;">
+        <div class="bibtex-header">
+            <button onclick="copyBibtex(this)" class="terminal-btn">Copy to Clipboard</button>
+            <button onclick="downloadBibtex(this, 'dirsmooth.bib')" class="terminal-btn">Download .bib</button>
+            <button onclick="toggleBibtex(this.closest('.bibtex').previousElementSibling)" class="terminal-btn">Close</button>
+        </div>
+        <div class="terminal-box">
+            <pre><code class="bibtex-content">@article{mishkin24_dir_smoothness,
+  author       = {Mishkin, Aaron and Khaled, Ahmed and Wang, Yuanhao and Defazio, Aaron and Gower, Robert M.},
+  url          = {https://arxiv.org/abs/2403.04081},
+  year         = {2024},
+  journal      = {arXiv preprint arXiv:2403.04081},
+  title        = {Directional Smoothness and Gradient Methods: Convergence and Adaptivity},
+  volume       = {abs/2403.04081},
+}
+</code></pre>
+        </div>
+    </div>
+</div>
+
+<style>
+.bibtex-link {
+    cursor: pointer;
+    color: #42a5f5;
+    display: inline;   
+    margin-left: 4px;  
+}
+
+.bibtex-container {
+    display: inline;   
+}
+
+.bibtex {
+    margin-top: 10px;  
+}
+
+.bibtex-header {
+    margin: 10px 0;
+    display: flex;
+    gap: 10px;
+}
+
+.terminal-btn {
+    background: #fff;
+    color: #000;
+    border: 1px solid #000;
+    padding: 5px 15px;
+    cursor: pointer;
+    font-family: monospace;
+}
+
+.terminal-btn:hover {
+    background: #eee;
+}
+
+.terminal-box {
+    background: #fff;
+    border: 1px solid #000;
+    padding: 10px;
+    margin: 5px 0;
+    width: 100ch;   
+}
+
+.terminal-box pre {
+    margin: 0;
+    white-space: pre-wrap;
+    word-break: break-all;
+    overflow-wrap: break-word;
+}
+
+
+.toast-notification {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: 1px solid #666;
+    opacity: 0;
+    transition: opacity 0.3s;
+    font-family: monospace;
+}
+
+.toast-notification.show {
+    opacity: 1;
+}
+</style>
+
+<script>
+function toggleBibtex(element) {
+    console.log('Toggle function called');
+    const bibtexDiv = element.nextElementSibling;
+    console.log('Current display:', bibtexDiv.style.display);
+    if (bibtexDiv.style.display === 'none') {
+        bibtexDiv.style.display = 'block';
+    } else {
+        bibtexDiv.style.display = 'none';
+    }
+}
+
+if (!document.getElementById('toast')) {
+    const toast = document.createElement('div');
+    toast.id = 'toast';
+    toast.className = 'toast-notification';
+    document.body.appendChild(toast);
+}
+
+function showToast(message) {
+    const toast = document.getElementById('toast');
+    toast.textContent = message;
+    toast.classList.add('show');
+    setTimeout(() => {
+        toast.classList.remove('show');
+    }, 2000);
+}
+
+function copyBibtex(btn) {
+    const bibtexContent = btn.closest('.bibtex').querySelector('.bibtex-content').textContent;
+    navigator.clipboard.writeText(bibtexContent).then(() => {
+        showToast('Copied to clipboard');
+    });
+}
+
+function downloadBibtex(btn, filename) {
+    const bibtexContent = btn.closest('.bibtex').querySelector('.bibtex-content').textContent;
+    const blob = new Blob([bibtexContent], { type: 'text/plain' });
+    const url = window.URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = filename;
+    document.body.appendChild(a);
+    a.click();
+    window.URL.revokeObjectURL(url);
+    document.body.removeChild(a);
+}
+</script>
+</p>
 </li>
 <li>
 <p><a href="https://arxiv.org/abs/2405.15682">The Road Less Scheduled</a><br>
-NeurIPS 2024 Oral, with <a href="https://www.aarondefazio.com/">Aaron Defazio</a>, <a href="https://x.com/alicey_ang">Xingyu (Alice) Yang</a>, <a href="https://scholar.google.com/citations?user=murJPNoAAAAJ&amp;hl=en">Harsh Mehta</a>, <a href="https://konstmish.com">Konstantin Mishchenko</a>, and <a href="https://ashok.cutkosky.com/">Ashok Cutkosky</a>. <a href="/static/roadlessscheduled.bib">(bibtex)</a></p>
+NeurIPS 2024 Oral, with <a href="https://www.aarondefazio.com/">Aaron Defazio</a>, <a href="https://x.com/alicey_ang">Xingyu (Alice) Yang</a>, <a href="https://scholar.google.com/citations?user=murJPNoAAAAJ&amp;hl=en">Harsh Mehta</a>, <a href="https://konstmish.com">Konstantin Mishchenko</a>, and <a href="https://ashok.cutkosky.com/">Ashok Cutkosky</a>. 
+
+<div class="bibtex-container">
+    <a class="bibtex-link" onclick="toggleBibtex(this)">[bibtex]</a>
+    <div class="bibtex" style="display: none;">
+        <div class="bibtex-header">
+            <button onclick="copyBibtex(this)" class="terminal-btn">Copy to Clipboard</button>
+            <button onclick="downloadBibtex(this, 'road.bib')" class="terminal-btn">Download .bib</button>
+            <button onclick="toggleBibtex(this.closest('.bibtex').previousElementSibling)" class="terminal-btn">Close</button>
+        </div>
+        <div class="terminal-box">
+            <pre><code class="bibtex-content">@article{defazio2024road,
+  title={The road less scheduled},
+  author={Defazio, Aaron and Yang, Xingyu Alice and Mehta, Harsh and Mishchenko, Konstantin and Khaled, Ahmed and Cutkosky, Ashok},
+  journal={arXiv preprint arXiv:2405.15682},
+  year={2024}
+}
+</code></pre>
+        </div>
+    </div>
+</div>
+
+<style>
+.bibtex-link {
+    cursor: pointer;
+    color: #42a5f5;
+    display: inline;   
+    margin-left: 4px;  
+}
+
+.bibtex-container {
+    display: inline;   
+}
+
+.bibtex {
+    margin-top: 10px;  
+}
+
+.bibtex-header {
+    margin: 10px 0;
+    display: flex;
+    gap: 10px;
+}
+
+.terminal-btn {
+    background: #fff;
+    color: #000;
+    border: 1px solid #000;
+    padding: 5px 15px;
+    cursor: pointer;
+    font-family: monospace;
+}
+
+.terminal-btn:hover {
+    background: #eee;
+}
+
+.terminal-box {
+    background: #fff;
+    border: 1px solid #000;
+    padding: 10px;
+    margin: 5px 0;
+    width: 100ch;   
+}
+
+.terminal-box pre {
+    margin: 0;
+    white-space: pre-wrap;
+    word-break: break-all;
+    overflow-wrap: break-word;
+}
+
+
+.toast-notification {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: 1px solid #666;
+    opacity: 0;
+    transition: opacity 0.3s;
+    font-family: monospace;
+}
+
+.toast-notification.show {
+    opacity: 1;
+}
+</style>
+
+<script>
+function toggleBibtex(element) {
+    console.log('Toggle function called');
+    const bibtexDiv = element.nextElementSibling;
+    console.log('Current display:', bibtexDiv.style.display);
+    if (bibtexDiv.style.display === 'none') {
+        bibtexDiv.style.display = 'block';
+    } else {
+        bibtexDiv.style.display = 'none';
+    }
+}
+
+if (!document.getElementById('toast')) {
+    const toast = document.createElement('div');
+    toast.id = 'toast';
+    toast.className = 'toast-notification';
+    document.body.appendChild(toast);
+}
+
+function showToast(message) {
+    const toast = document.getElementById('toast');
+    toast.textContent = message;
+    toast.classList.add('show');
+    setTimeout(() => {
+        toast.classList.remove('show');
+    }, 2000);
+}
+
+function copyBibtex(btn) {
+    const bibtexContent = btn.closest('.bibtex').querySelector('.bibtex-content').textContent;
+    navigator.clipboard.writeText(bibtexContent).then(() => {
+        showToast('Copied to clipboard');
+    });
+}
+
+function downloadBibtex(btn, filename) {
+    const bibtexContent = btn.closest('.bibtex').querySelector('.bibtex-content').textContent;
+    const blob = new Blob([bibtexContent], { type: 'text/plain' });
+    const url = window.URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = filename;
+    document.body.appendChild(a);
+    a.click();
+    window.URL.revokeObjectURL(url);
+    document.body.removeChild(a);
+}
+</script>
+</p>
 </li>
 <li>
 <p><a href="https://arxiv.org/abs/2206.07021">Federated Optimization Algorithms with Random Reshuffling and Gradient Compression</a><br>
-NeurIPS 2024, <em>with <a href="https://scholar.google.com/citations?user=R-xZRIAAAAAJ&amp;hl=ru">Abdurakhmon Sadiev</a>, <a href="https://grigory-malinovsky.github.io/">Grigory Malinovsky</a>, <a href="https://eduardgorbunov.github.io/">Eduard Gorbunov</a>, <a href="https://scholar.google.com/citations?user=OBbPecwAAAAJ&amp;hl=en">Igor Sokolov</a>, <a href="https://burlachenkok.github.io/">Konstantin Burlachenko</a>, and <a href="https://richtarik.org/index.html">Peter Richtárik</a></em>. <a href="/static/sadiev22fedqrr.bib">(bibtex)</a></p>
+NeurIPS 2024, <em>with <a href="https://scholar.google.com/citations?user=R-xZRIAAAAAJ&amp;hl=ru">Abdurakhmon Sadiev</a>, <a href="https://grigory-malinovsky.github.io/">Grigory Malinovsky</a>, <a href="https://eduardgorbunov.github.io/">Eduard Gorbunov</a>, <a href="https://scholar.google.com/citations?user=OBbPecwAAAAJ&amp;hl=en">Igor Sokolov</a>, <a href="https://burlachenkok.github.io/">Konstantin Burlachenko</a>, and <a href="https://richtarik.org/index.html">Peter Richtárik</a></em>. 
+
+<div class="bibtex-container">
+    <a class="bibtex-link" onclick="toggleBibtex(this)">[bibtex]</a>
+    <div class="bibtex" style="display: none;">
+        <div class="bibtex-header">
+            <button onclick="copyBibtex(this)" class="terminal-btn">Copy to Clipboard</button>
+            <button onclick="downloadBibtex(this, 'sadiev22fedqrr.bib')" class="terminal-btn">Download .bib</button>
+            <button onclick="toggleBibtex(this.closest('.bibtex').previousElementSibling)" class="terminal-btn">Close</button>
+        </div>
+        <div class="terminal-box">
+            <pre><code class="bibtex-content">@article{sadiev22_feder_optim_algor_with_random,
+  author       = {Sadiev, Abdurakhmon and Malinovsky, Grigory and Gorbunov, Eduard and Sokolov, Igor and Khaled, Ahmed and Burlachenko, Konstantin and Richtárik, Peter},
+  url          = {https://arXiv.org/abs/2206.07021},
+  year         = {2022},
+  journal      = {arXiv preprint arXiv:2206.07021},
+  title        = {Federated Optimization Algorithms With Random Reshuffling and Gradient Compression},
+  volume       = {abs/2206.07021},
+}
+</code></pre>
+        </div>
+    </div>
+</div>
+
+<style>
+.bibtex-link {
+    cursor: pointer;
+    color: #42a5f5;
+    display: inline;   
+    margin-left: 4px;  
+}
+
+.bibtex-container {
+    display: inline;   
+}
+
+.bibtex {
+    margin-top: 10px;  
+}
+
+.bibtex-header {
+    margin: 10px 0;
+    display: flex;
+    gap: 10px;
+}
+
+.terminal-btn {
+    background: #fff;
+    color: #000;
+    border: 1px solid #000;
+    padding: 5px 15px;
+    cursor: pointer;
+    font-family: monospace;
+}
+
+.terminal-btn:hover {
+    background: #eee;
+}
+
+.terminal-box {
+    background: #fff;
+    border: 1px solid #000;
+    padding: 10px;
+    margin: 5px 0;
+    width: 100ch;   
+}
+
+.terminal-box pre {
+    margin: 0;
+    white-space: pre-wrap;
+    word-break: break-all;
+    overflow-wrap: break-word;
+}
+
+
+.toast-notification {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: 1px solid #666;
+    opacity: 0;
+    transition: opacity 0.3s;
+    font-family: monospace;
+}
+
+.toast-notification.show {
+    opacity: 1;
+}
+</style>
+
+<script>
+function toggleBibtex(element) {
+    console.log('Toggle function called');
+    const bibtexDiv = element.nextElementSibling;
+    console.log('Current display:', bibtexDiv.style.display);
+    if (bibtexDiv.style.display === 'none') {
+        bibtexDiv.style.display = 'block';
+    } else {
+        bibtexDiv.style.display = 'none';
+    }
+}
+
+if (!document.getElementById('toast')) {
+    const toast = document.createElement('div');
+    toast.id = 'toast';
+    toast.className = 'toast-notification';
+    document.body.appendChild(toast);
+}
+
+function showToast(message) {
+    const toast = document.getElementById('toast');
+    toast.textContent = message;
+    toast.classList.add('show');
+    setTimeout(() => {
+        toast.classList.remove('show');
+    }, 2000);
+}
+
+function copyBibtex(btn) {
+    const bibtexContent = btn.closest('.bibtex').querySelector('.bibtex-content').textContent;
+    navigator.clipboard.writeText(bibtexContent).then(() => {
+        showToast('Copied to clipboard');
+    });
+}
+
+function downloadBibtex(btn, filename) {
+    const bibtexContent = btn.closest('.bibtex').querySelector('.bibtex-content').textContent;
+    const blob = new Blob([bibtexContent], { type: 'text/plain' });
+    const url = window.URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = filename;
+    document.body.appendChild(a);
+    a.click();
+    window.URL.revokeObjectURL(url);
+    document.body.removeChild(a);
+}
+</script>
+</p>
 </li>
 <li>
 <p><a href="https://arxiv.org/abs/2402.07793">Tuning-Free Stochastic Optimization</a><br>
-ICML 2024 Spotlight, <em>with <a href="https://sites.google.com/view/cjin/home">Chi Jin</a></em>. <a href="/static/tuningfree.bib">(bibtex)</a></p>
+ICML 2024 Spotlight, <em>with <a href="https://sites.google.com/view/cjin/home">Chi Jin</a></em>. 
+
+<div class="bibtex-container">
+    <a class="bibtex-link" onclick="toggleBibtex(this)">[bibtex]</a>
+    <div class="bibtex" style="display: none;">
+        <div class="bibtex-header">
+            <button onclick="copyBibtex(this)" class="terminal-btn">Copy to Clipboard</button>
+            <button onclick="downloadBibtex(this, 'tuningfree.bib')" class="terminal-btn">Download .bib</button>
+            <button onclick="toggleBibtex(this.closest('.bibtex').previousElementSibling)" class="terminal-btn">Close</button>
+        </div>
+        <div class="terminal-box">
+            <pre><code class="bibtex-content">@article{khaled24_tuning_free,
+  author       = {Khaled, Ahmed and Jin, Chi},
+  url          = {https://arxiv.org/abs/2402.07793},
+  year         = {2024},
+  journal      = {arXiv preprint arXiv:2402.07793},
+  title        = {Tuning-Free Stochastic Optimization},
+  volume       = {abs/2402.07793},
+}
+</code></pre>
+        </div>
+    </div>
+</div>
+
+<style>
+.bibtex-link {
+    cursor: pointer;
+    color: #42a5f5;
+    display: inline;   
+    margin-left: 4px;  
+}
+
+.bibtex-container {
+    display: inline;   
+}
+
+.bibtex {
+    margin-top: 10px;  
+}
+
+.bibtex-header {
+    margin: 10px 0;
+    display: flex;
+    gap: 10px;
+}
+
+.terminal-btn {
+    background: #fff;
+    color: #000;
+    border: 1px solid #000;
+    padding: 5px 15px;
+    cursor: pointer;
+    font-family: monospace;
+}
+
+.terminal-btn:hover {
+    background: #eee;
+}
+
+.terminal-box {
+    background: #fff;
+    border: 1px solid #000;
+    padding: 10px;
+    margin: 5px 0;
+    width: 100ch;   
+}
+
+.terminal-box pre {
+    margin: 0;
+    white-space: pre-wrap;
+    word-break: break-all;
+    overflow-wrap: break-word;
+}
+
+
+.toast-notification {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: 1px solid #666;
+    opacity: 0;
+    transition: opacity 0.3s;
+    font-family: monospace;
+}
+
+.toast-notification.show {
+    opacity: 1;
+}
+</style>
+
+<script>
+function toggleBibtex(element) {
+    console.log('Toggle function called');
+    const bibtexDiv = element.nextElementSibling;
+    console.log('Current display:', bibtexDiv.style.display);
+    if (bibtexDiv.style.display === 'none') {
+        bibtexDiv.style.display = 'block';
+    } else {
+        bibtexDiv.style.display = 'none';
+    }
+}
+
+if (!document.getElementById('toast')) {
+    const toast = document.createElement('div');
+    toast.id = 'toast';
+    toast.className = 'toast-notification';
+    document.body.appendChild(toast);
+}
+
+function showToast(message) {
+    const toast = document.getElementById('toast');
+    toast.textContent = message;
+    toast.classList.add('show');
+    setTimeout(() => {
+        toast.classList.remove('show');
+    }, 2000);
+}
+
+function copyBibtex(btn) {
+    const bibtexContent = btn.closest('.bibtex').querySelector('.bibtex-content').textContent;
+    navigator.clipboard.writeText(bibtexContent).then(() => {
+        showToast('Copied to clipboard');
+    });
+}
+
+function downloadBibtex(btn, filename) {
+    const bibtexContent = btn.closest('.bibtex').querySelector('.bibtex-content').textContent;
+    const blob = new Blob([bibtexContent], { type: 'text/plain' });
+    const url = window.URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = filename;
+    document.body.appendChild(a);
+    a.click();
+    window.URL.revokeObjectURL(url);
+    document.body.removeChild(a);
+}
+</script>
+</p>
 </li>
 <li>
 <p><a href="https://arxiv.org/abs/2305.16284">DoWG Unleashed: An Efficient Universal Parameter-Free Gradient Descent Method</a><br>
-Advances in Neural Information Processing Systems 35 (NeurIPS 2023), <em>with <a href="https://sites.google.com/view/cjin/home">Chi Jin</a> and <a href="https://konstmish.com">Konstantin Mishchenko</a></em>. <a href="/static/dowg.bib">(bibtex)</a></p>
+Advances in Neural Information Processing Systems 35 (NeurIPS 2023), <em>with <a href="https://sites.google.com/view/cjin/home">Chi Jin</a> and <a href="https://konstmish.com">Konstantin Mishchenko</a></em>. 
+
+<div class="bibtex-container">
+    <a class="bibtex-link" onclick="toggleBibtex(this)">[bibtex]</a>
+    <div class="bibtex" style="display: none;">
+        <div class="bibtex-header">
+            <button onclick="copyBibtex(this)" class="terminal-btn">Copy to Clipboard</button>
+            <button onclick="downloadBibtex(this, 'dowg.bib')" class="terminal-btn">Download .bib</button>
+            <button onclick="toggleBibtex(this.closest('.bibtex').previousElementSibling)" class="terminal-btn">Close</button>
+        </div>
+        <div class="terminal-box">
+            <pre><code class="bibtex-content">@article{khaled23_dowg,
+  author       = {Khaled, Ahmed and Mishchenko, Konstantin and Jin, Chi},
+  url          = {https://arXiv.org/abs/2305.16284},
+  year         = {2023},
+  journal      = {arXiv preprint arXiv:2305.16284},
+  title        = {{DoWG} Unleashed: an Efficient Universal Parameter-Free Gradient Descent Method},
+  volume       = {abs/2305.16284},
+}
+</code></pre>
+        </div>
+    </div>
+</div>
+
+<style>
+.bibtex-link {
+    cursor: pointer;
+    color: #42a5f5;
+    display: inline;   
+    margin-left: 4px;  
+}
+
+.bibtex-container {
+    display: inline;   
+}
+
+.bibtex {
+    margin-top: 10px;  
+}
+
+.bibtex-header {
+    margin: 10px 0;
+    display: flex;
+    gap: 10px;
+}
+
+.terminal-btn {
+    background: #fff;
+    color: #000;
+    border: 1px solid #000;
+    padding: 5px 15px;
+    cursor: pointer;
+    font-family: monospace;
+}
+
+.terminal-btn:hover {
+    background: #eee;
+}
+
+.terminal-box {
+    background: #fff;
+    border: 1px solid #000;
+    padding: 10px;
+    margin: 5px 0;
+    width: 100ch;   
+}
+
+.terminal-box pre {
+    margin: 0;
+    white-space: pre-wrap;
+    word-break: break-all;
+    overflow-wrap: break-word;
+}
+
+
+.toast-notification {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: 1px solid #666;
+    opacity: 0;
+    transition: opacity 0.3s;
+    font-family: monospace;
+}
+
+.toast-notification.show {
+    opacity: 1;
+}
+</style>
+
+<script>
+function toggleBibtex(element) {
+    console.log('Toggle function called');
+    const bibtexDiv = element.nextElementSibling;
+    console.log('Current display:', bibtexDiv.style.display);
+    if (bibtexDiv.style.display === 'none') {
+        bibtexDiv.style.display = 'block';
+    } else {
+        bibtexDiv.style.display = 'none';
+    }
+}
+
+if (!document.getElementById('toast')) {
+    const toast = document.createElement('div');
+    toast.id = 'toast';
+    toast.className = 'toast-notification';
+    document.body.appendChild(toast);
+}
+
+function showToast(message) {
+    const toast = document.getElementById('toast');
+    toast.textContent = message;
+    toast.classList.add('show');
+    setTimeout(() => {
+        toast.classList.remove('show');
+    }, 2000);
+}
+
+function copyBibtex(btn) {
+    const bibtexContent = btn.closest('.bibtex').querySelector('.bibtex-content').textContent;
+    navigator.clipboard.writeText(bibtexContent).then(() => {
+        showToast('Copied to clipboard');
+    });
+}
+
+function downloadBibtex(btn, filename) {
+    const bibtexContent = btn.closest('.bibtex').querySelector('.bibtex-content').textContent;
+    const blob = new Blob([bibtexContent], { type: 'text/plain' });
+    const url = window.URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = filename;
+    document.body.appendChild(a);
+    a.click();
+    window.URL.revokeObjectURL(url);
+    document.body.removeChild(a);
+}
+</script>
+</p>
 </li>
 <li>
 <p><a href="https://arxiv.org/abs/2209.02257">Faster federated optimization under second-order similarity</a><br>
-The 11th International Conference on Learning Representations (ICLR 2023), <em>with <a href="https://sites.google.com/view/cjin/home">Chi Jin</a></em>. <a href="/static/KJ2022FFSO.bib">(bibtex)</a></p>
+The 11th International Conference on Learning Representations (ICLR 2023), <em>with <a href="https://sites.google.com/view/cjin/home">Chi Jin</a></em>. 
+
+<div class="bibtex-container">
+    <a class="bibtex-link" onclick="toggleBibtex(this)">[bibtex]</a>
+    <div class="bibtex" style="display: none;">
+        <div class="bibtex-header">
+            <button onclick="copyBibtex(this)" class="terminal-btn">Copy to Clipboard</button>
+            <button onclick="downloadBibtex(this, 'KJ2022FFSO.bib')" class="terminal-btn">Download .bib</button>
+            <button onclick="toggleBibtex(this.closest('.bibtex').previousElementSibling)" class="terminal-btn">Close</button>
+        </div>
+        <div class="terminal-box">
+            <pre><code class="bibtex-content">@Article{kj22_faster_federated,
+  author      = {Ahmed Khaled and Chi Jin},
+  title       = {{Faster federated optimization under second-order similarity}},
+  journal     = {arXiv preprint arXiv:2209.02257},
+  year        = {2022}
+}
+</code></pre>
+        </div>
+    </div>
+</div>
+
+<style>
+.bibtex-link {
+    cursor: pointer;
+    color: #42a5f5;
+    display: inline;   
+    margin-left: 4px;  
+}
+
+.bibtex-container {
+    display: inline;   
+}
+
+.bibtex {
+    margin-top: 10px;  
+}
+
+.bibtex-header {
+    margin: 10px 0;
+    display: flex;
+    gap: 10px;
+}
+
+.terminal-btn {
+    background: #fff;
+    color: #000;
+    border: 1px solid #000;
+    padding: 5px 15px;
+    cursor: pointer;
+    font-family: monospace;
+}
+
+.terminal-btn:hover {
+    background: #eee;
+}
+
+.terminal-box {
+    background: #fff;
+    border: 1px solid #000;
+    padding: 10px;
+    margin: 5px 0;
+    width: 100ch;   
+}
+
+.terminal-box pre {
+    margin: 0;
+    white-space: pre-wrap;
+    word-break: break-all;
+    overflow-wrap: break-word;
+}
+
+
+.toast-notification {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: 1px solid #666;
+    opacity: 0;
+    transition: opacity 0.3s;
+    font-family: monospace;
+}
+
+.toast-notification.show {
+    opacity: 1;
+}
+</style>
+
+<script>
+function toggleBibtex(element) {
+    console.log('Toggle function called');
+    const bibtexDiv = element.nextElementSibling;
+    console.log('Current display:', bibtexDiv.style.display);
+    if (bibtexDiv.style.display === 'none') {
+        bibtexDiv.style.display = 'block';
+    } else {
+        bibtexDiv.style.display = 'none';
+    }
+}
+
+if (!document.getElementById('toast')) {
+    const toast = document.createElement('div');
+    toast.id = 'toast';
+    toast.className = 'toast-notification';
+    document.body.appendChild(toast);
+}
+
+function showToast(message) {
+    const toast = document.getElementById('toast');
+    toast.textContent = message;
+    toast.classList.add('show');
+    setTimeout(() => {
+        toast.classList.remove('show');
+    }, 2000);
+}
+
+function copyBibtex(btn) {
+    const bibtexContent = btn.closest('.bibtex').querySelector('.bibtex-content').textContent;
+    navigator.clipboard.writeText(bibtexContent).then(() => {
+        showToast('Copied to clipboard');
+    });
+}
+
+function downloadBibtex(btn, filename) {
+    const bibtexContent = btn.closest('.bibtex').querySelector('.bibtex-content').textContent;
+    const blob = new Blob([bibtexContent], { type: 'text/plain' });
+    const url = window.URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = filename;
+    document.body.appendChild(a);
+    a.click();
+    window.URL.revokeObjectURL(url);
+    document.body.removeChild(a);
+}
+</script>
+</p>
 </li>
 <li>
 <p><a href="https://openreview.net/pdf?id=AU4qHN2VkS">Better Theory for SGD in the Nonconvex World</a><br>
-Transactions on Machine Learning Research (TMLR) 2023, <em>with <a href="https://richtarik.org/index.html">Peter Richtárik</a></em>. <a href="/static/KR2020sgdnonconvex.bib">(bibtex)</a>. Original preprint <a href="https://arxiv.org/abs/2002.03329">arXiv:2002.03329</a> on arXiv since 2020.</p>
+Transactions on Machine Learning Research (TMLR) 2023, <em>with <a href="https://richtarik.org/index.html">Peter Richtárik</a></em>. Original preprint <a href="https://arxiv.org/abs/2002.03329">arXiv:2002.03329</a> on arXiv since 2020. 
+
+<div class="bibtex-container">
+    <a class="bibtex-link" onclick="toggleBibtex(this)">[bibtex]</a>
+    <div class="bibtex" style="display: none;">
+        <div class="bibtex-header">
+            <button onclick="copyBibtex(this)" class="terminal-btn">Copy to Clipboard</button>
+            <button onclick="downloadBibtex(this, 'KR2020sgdnonconvex.bib')" class="terminal-btn">Download .bib</button>
+            <button onclick="toggleBibtex(this.closest('.bibtex').previousElementSibling)" class="terminal-btn">Close</button>
+        </div>
+        <div class="terminal-box">
+            <pre><code class="bibtex-content">@Article{KR2020sgdnonconvex,
+  author      = {Ahmed Khaled and Peter Richt{\&#39;a}rik},
+  title       = {{Better Theory for SGD in the Nonconvex World}},
+  journal     = {arXiv preprint arXiv:2002.03329},
+  year        = {2020}
+}</code></pre>
+        </div>
+    </div>
+</div>
+
+<style>
+.bibtex-link {
+    cursor: pointer;
+    color: #42a5f5;
+    display: inline;   
+    margin-left: 4px;  
+}
+
+.bibtex-container {
+    display: inline;   
+}
+
+.bibtex {
+    margin-top: 10px;  
+}
+
+.bibtex-header {
+    margin: 10px 0;
+    display: flex;
+    gap: 10px;
+}
+
+.terminal-btn {
+    background: #fff;
+    color: #000;
+    border: 1px solid #000;
+    padding: 5px 15px;
+    cursor: pointer;
+    font-family: monospace;
+}
+
+.terminal-btn:hover {
+    background: #eee;
+}
+
+.terminal-box {
+    background: #fff;
+    border: 1px solid #000;
+    padding: 10px;
+    margin: 5px 0;
+    width: 100ch;   
+}
+
+.terminal-box pre {
+    margin: 0;
+    white-space: pre-wrap;
+    word-break: break-all;
+    overflow-wrap: break-word;
+}
+
+
+.toast-notification {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: 1px solid #666;
+    opacity: 0;
+    transition: opacity 0.3s;
+    font-family: monospace;
+}
+
+.toast-notification.show {
+    opacity: 1;
+}
+</style>
+
+<script>
+function toggleBibtex(element) {
+    console.log('Toggle function called');
+    const bibtexDiv = element.nextElementSibling;
+    console.log('Current display:', bibtexDiv.style.display);
+    if (bibtexDiv.style.display === 'none') {
+        bibtexDiv.style.display = 'block';
+    } else {
+        bibtexDiv.style.display = 'none';
+    }
+}
+
+if (!document.getElementById('toast')) {
+    const toast = document.createElement('div');
+    toast.id = 'toast';
+    toast.className = 'toast-notification';
+    document.body.appendChild(toast);
+}
+
+function showToast(message) {
+    const toast = document.getElementById('toast');
+    toast.textContent = message;
+    toast.classList.add('show');
+    setTimeout(() => {
+        toast.classList.remove('show');
+    }, 2000);
+}
+
+function copyBibtex(btn) {
+    const bibtexContent = btn.closest('.bibtex').querySelector('.bibtex-content').textContent;
+    navigator.clipboard.writeText(bibtexContent).then(() => {
+        showToast('Copied to clipboard');
+    });
+}
+
+function downloadBibtex(btn, filename) {
+    const bibtexContent = btn.closest('.bibtex').querySelector('.bibtex-content').textContent;
+    const blob = new Blob([bibtexContent], { type: 'text/plain' });
+    const url = window.URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = filename;
+    document.body.appendChild(a);
+    a.click();
+    window.URL.revokeObjectURL(url);
+    document.body.removeChild(a);
+}
+</script>
+</p>
 </li>
 <li>
 <p><a href="https://arxiv.org/abs/2102.06704">Proximal and Federated Random Reshuffling</a><br>
-The 39th International Conference on Machine Learning (ICML 2022), <em>with <a href="https://konstmish.com">Konstantin Mishchenko</a> and <a href="https://richtarik.org/index.html">Peter Richtárik</a></em>. <a href="/static/MKR2021proxrr.bib">(bibtex)</a></p>
+The 39th International Conference on Machine Learning (ICML 2022), <em>with <a href="https://konstmish.com">Konstantin Mishchenko</a> and <a href="https://richtarik.org/index.html">Peter Richtárik</a></em>. 
+
+<div class="bibtex-container">
+    <a class="bibtex-link" onclick="toggleBibtex(this)">[bibtex]</a>
+    <div class="bibtex" style="display: none;">
+        <div class="bibtex-header">
+            <button onclick="copyBibtex(this)" class="terminal-btn">Copy to Clipboard</button>
+            <button onclick="downloadBibtex(this, 'MKR2021proxrr.bib')" class="terminal-btn">Download .bib</button>
+            <button onclick="toggleBibtex(this.closest('.bibtex').previousElementSibling)" class="terminal-btn">Close</button>
+        </div>
+        <div class="terminal-box">
+            <pre><code class="bibtex-content">@Article{MKR2020randomreshuffling,
+  author  = {Konstantin Mishchenko and Ahmed Khaled and Peter Richt{\&#39;a}rik},
+  title   = {{Proximal and Federated Random Reshuffling}},
+  journal = {arXiv preprint arXiv:2102.06704},
+  year    = {2021},
+}</code></pre>
+        </div>
+    </div>
+</div>
+
+<style>
+.bibtex-link {
+    cursor: pointer;
+    color: #42a5f5;
+    display: inline;   
+    margin-left: 4px;  
+}
+
+.bibtex-container {
+    display: inline;   
+}
+
+.bibtex {
+    margin-top: 10px;  
+}
+
+.bibtex-header {
+    margin: 10px 0;
+    display: flex;
+    gap: 10px;
+}
+
+.terminal-btn {
+    background: #fff;
+    color: #000;
+    border: 1px solid #000;
+    padding: 5px 15px;
+    cursor: pointer;
+    font-family: monospace;
+}
+
+.terminal-btn:hover {
+    background: #eee;
+}
+
+.terminal-box {
+    background: #fff;
+    border: 1px solid #000;
+    padding: 10px;
+    margin: 5px 0;
+    width: 100ch;   
+}
+
+.terminal-box pre {
+    margin: 0;
+    white-space: pre-wrap;
+    word-break: break-all;
+    overflow-wrap: break-word;
+}
+
+
+.toast-notification {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: 1px solid #666;
+    opacity: 0;
+    transition: opacity 0.3s;
+    font-family: monospace;
+}
+
+.toast-notification.show {
+    opacity: 1;
+}
+</style>
+
+<script>
+function toggleBibtex(element) {
+    console.log('Toggle function called');
+    const bibtexDiv = element.nextElementSibling;
+    console.log('Current display:', bibtexDiv.style.display);
+    if (bibtexDiv.style.display === 'none') {
+        bibtexDiv.style.display = 'block';
+    } else {
+        bibtexDiv.style.display = 'none';
+    }
+}
+
+if (!document.getElementById('toast')) {
+    const toast = document.createElement('div');
+    toast.id = 'toast';
+    toast.className = 'toast-notification';
+    document.body.appendChild(toast);
+}
+
+function showToast(message) {
+    const toast = document.getElementById('toast');
+    toast.textContent = message;
+    toast.classList.add('show');
+    setTimeout(() => {
+        toast.classList.remove('show');
+    }, 2000);
+}
+
+function copyBibtex(btn) {
+    const bibtexContent = btn.closest('.bibtex').querySelector('.bibtex-content').textContent;
+    navigator.clipboard.writeText(bibtexContent).then(() => {
+        showToast('Copied to clipboard');
+    });
+}
+
+function downloadBibtex(btn, filename) {
+    const bibtexContent = btn.closest('.bibtex').querySelector('.bibtex-content').textContent;
+    const blob = new Blob([bibtexContent], { type: 'text/plain' });
+    const url = window.URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = filename;
+    document.body.appendChild(a);
+    a.click();
+    window.URL.revokeObjectURL(url);
+    document.body.removeChild(a);
+}
+</script>
+</p>
 </li>
 <li>
 <p><a href="https://arxiv.org/abs/2111.11556">FLIX: A Simple and Communication-Efficient Alternative to Local Methods in Federated Learning</a><br>
-The 25th International Conference on Artificial Intelligence and Statistics (AISTATS 2022), <em>with <a href="https://elnurgasanov.com/">Elnur Gasanov</a>, <a href="https://samuelhorvath.github.io/">Samuel Horváth</a>, and <a href="https://www.richtarik.org">Peter Richtárik</a></em>. <a href="/static/GKHR2022flix.bib">(bibtex)</a></p>
+The 25th International Conference on Artificial Intelligence and Statistics (AISTATS 2022), <em>with <a href="https://elnurgasanov.com/">Elnur Gasanov</a>, <a href="https://samuelhorvath.github.io/">Samuel Horváth</a>, and <a href="https://www.richtarik.org">Peter Richtárik</a></em>. 
+
+<div class="bibtex-container">
+    <a class="bibtex-link" onclick="toggleBibtex(this)">[bibtex]</a>
+    <div class="bibtex" style="display: none;">
+        <div class="bibtex-header">
+            <button onclick="copyBibtex(this)" class="terminal-btn">Copy to Clipboard</button>
+            <button onclick="downloadBibtex(this, 'GKHR2022flix.bib')" class="terminal-btn">Download .bib</button>
+            <button onclick="toggleBibtex(this.closest('.bibtex').previousElementSibling)" class="terminal-btn">Close</button>
+        </div>
+        <div class="terminal-box">
+            <pre><code class="bibtex-content">@InProceedings{GKHR2022flix,
+  title = 	 { {FLIX}: A Simple and Communication-Efficient Alternative to Local Methods in Federated Learning },
+  author =       {Gasanov, Elnur and Khaled, Ahmed and Horv\&#39;ath, Samuel and Richt{\&#39;a}rik, Peter},
+  booktitle = 	 {Proceedings of The 25th International Conference on Artificial Intelligence and Statistics},
+  pages = 	 {11374--11421},
+  year = 	 {2022},
+  editor = 	 {Camps-Valls, Gustau and Ruiz, Francisco J. R. and Valera, Isabel},
+  volume = 	 {151},
+  series = 	 {Proceedings of Machine Learning Research},
+  month = 	 {28--30 Mar},
+  publisher =    {PMLR},
+  pdf = 	 {https://proceedings.mlr.press/v151/gasanov22a/gasanov22a.pdf},
+  url = 	 {https://proceedings.mlr.press/v151/gasanov22a.html},
+  abstract = 	 { Federated Learning (FL) is an increasingly popular machine learning paradigm in which multiple nodes try to collaboratively learn under privacy, communication and multiple heterogeneity constraints. A persistent problem in federated learning is that it is not clear what the optimization objective should be: the standard average risk minimization of supervised learning is inadequate in handling several major constraints specific to federated learning, such as communication adaptivity and personalization control. We identify several key desiderata in frameworks for federated learning and introduce a new framework, FLIX, that takes into account the unique challenges brought by federated learning. FLIX has a standard finite-sum form, which enables practitioners to tap into the immense wealth of existing (potentially non-local) methods for distributed optimization. Through a smart initialization that does not require any communication, FLIX does not require the use of local steps but is still provably capable of performing dissimilarity regularization on par with local methods. We give several algorithms for solving the FLIX formulation efficiently under communication constraints. Finally, we corroborate our theoretical results with extensive experimentation. }
+}
+</code></pre>
+        </div>
+    </div>
+</div>
+
+<style>
+.bibtex-link {
+    cursor: pointer;
+    color: #42a5f5;
+    display: inline;   
+    margin-left: 4px;  
+}
+
+.bibtex-container {
+    display: inline;   
+}
+
+.bibtex {
+    margin-top: 10px;  
+}
+
+.bibtex-header {
+    margin: 10px 0;
+    display: flex;
+    gap: 10px;
+}
+
+.terminal-btn {
+    background: #fff;
+    color: #000;
+    border: 1px solid #000;
+    padding: 5px 15px;
+    cursor: pointer;
+    font-family: monospace;
+}
+
+.terminal-btn:hover {
+    background: #eee;
+}
+
+.terminal-box {
+    background: #fff;
+    border: 1px solid #000;
+    padding: 10px;
+    margin: 5px 0;
+    width: 100ch;   
+}
+
+.terminal-box pre {
+    margin: 0;
+    white-space: pre-wrap;
+    word-break: break-all;
+    overflow-wrap: break-word;
+}
+
+
+.toast-notification {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: 1px solid #666;
+    opacity: 0;
+    transition: opacity 0.3s;
+    font-family: monospace;
+}
+
+.toast-notification.show {
+    opacity: 1;
+}
+</style>
+
+<script>
+function toggleBibtex(element) {
+    console.log('Toggle function called');
+    const bibtexDiv = element.nextElementSibling;
+    console.log('Current display:', bibtexDiv.style.display);
+    if (bibtexDiv.style.display === 'none') {
+        bibtexDiv.style.display = 'block';
+    } else {
+        bibtexDiv.style.display = 'none';
+    }
+}
+
+if (!document.getElementById('toast')) {
+    const toast = document.createElement('div');
+    toast.id = 'toast';
+    toast.className = 'toast-notification';
+    document.body.appendChild(toast);
+}
+
+function showToast(message) {
+    const toast = document.getElementById('toast');
+    toast.textContent = message;
+    toast.classList.add('show');
+    setTimeout(() => {
+        toast.classList.remove('show');
+    }, 2000);
+}
+
+function copyBibtex(btn) {
+    const bibtexContent = btn.closest('.bibtex').querySelector('.bibtex-content').textContent;
+    navigator.clipboard.writeText(bibtexContent).then(() => {
+        showToast('Copied to clipboard');
+    });
+}
+
+function downloadBibtex(btn, filename) {
+    const bibtexContent = btn.closest('.bibtex').querySelector('.bibtex-content').textContent;
+    const blob = new Blob([bibtexContent], { type: 'text/plain' });
+    const url = window.URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = filename;
+    document.body.appendChild(a);
+    a.click();
+    window.URL.revokeObjectURL(url);
+    document.body.removeChild(a);
+}
+</script>
+</p>
 </li>
 <li>
 <p><a href="https://arxiv.org/abs/2006.05988">Random Reshuffling: Simple Analysis with Vast Improvements</a><br>
-Advances in Neural Information Processing Systems 33 (NeurIPS 2020), <em>with <a href="https://konstmish.com">Konstantin Mishchenko</a> and <a href="https://richtarik.org/index.html">Peter Richtárik</a></em>. <a href="/static/MKR2020rr.bib">(bibtex)</a></p>
+Advances in Neural Information Processing Systems 33 (NeurIPS 2020), <em>with <a href="https://konstmish.com">Konstantin Mishchenko</a> and <a href="https://richtarik.org/index.html">Peter Richtárik</a></em>. 
+
+<div class="bibtex-container">
+    <a class="bibtex-link" onclick="toggleBibtex(this)">[bibtex]</a>
+    <div class="bibtex" style="display: none;">
+        <div class="bibtex-header">
+            <button onclick="copyBibtex(this)" class="terminal-btn">Copy to Clipboard</button>
+            <button onclick="downloadBibtex(this, 'MKR2020rr.bib')" class="terminal-btn">Download .bib</button>
+            <button onclick="toggleBibtex(this.closest('.bibtex').previousElementSibling)" class="terminal-btn">Close</button>
+        </div>
+        <div class="terminal-box">
+            <pre><code class="bibtex-content">@Article{MKR2020randomreshuffling,
+  author  = {Konstantin Mishchenko and Ahmed Khaled and Peter Richt{\&#39;a}rik},
+  title   = {{Random Reshuffling: Simple Analysis with Vast Improvements}},
+  journal = {arXiv preprint arXiv:2006.05988},
+  year    = {2020},
+}</code></pre>
+        </div>
+    </div>
+</div>
+
+<style>
+.bibtex-link {
+    cursor: pointer;
+    color: #42a5f5;
+    display: inline;   
+    margin-left: 4px;  
+}
+
+.bibtex-container {
+    display: inline;   
+}
+
+.bibtex {
+    margin-top: 10px;  
+}
+
+.bibtex-header {
+    margin: 10px 0;
+    display: flex;
+    gap: 10px;
+}
+
+.terminal-btn {
+    background: #fff;
+    color: #000;
+    border: 1px solid #000;
+    padding: 5px 15px;
+    cursor: pointer;
+    font-family: monospace;
+}
+
+.terminal-btn:hover {
+    background: #eee;
+}
+
+.terminal-box {
+    background: #fff;
+    border: 1px solid #000;
+    padding: 10px;
+    margin: 5px 0;
+    width: 100ch;   
+}
+
+.terminal-box pre {
+    margin: 0;
+    white-space: pre-wrap;
+    word-break: break-all;
+    overflow-wrap: break-word;
+}
+
+
+.toast-notification {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: 1px solid #666;
+    opacity: 0;
+    transition: opacity 0.3s;
+    font-family: monospace;
+}
+
+.toast-notification.show {
+    opacity: 1;
+}
+</style>
+
+<script>
+function toggleBibtex(element) {
+    console.log('Toggle function called');
+    const bibtexDiv = element.nextElementSibling;
+    console.log('Current display:', bibtexDiv.style.display);
+    if (bibtexDiv.style.display === 'none') {
+        bibtexDiv.style.display = 'block';
+    } else {
+        bibtexDiv.style.display = 'none';
+    }
+}
+
+if (!document.getElementById('toast')) {
+    const toast = document.createElement('div');
+    toast.id = 'toast';
+    toast.className = 'toast-notification';
+    document.body.appendChild(toast);
+}
+
+function showToast(message) {
+    const toast = document.getElementById('toast');
+    toast.textContent = message;
+    toast.classList.add('show');
+    setTimeout(() => {
+        toast.classList.remove('show');
+    }, 2000);
+}
+
+function copyBibtex(btn) {
+    const bibtexContent = btn.closest('.bibtex').querySelector('.bibtex-content').textContent;
+    navigator.clipboard.writeText(bibtexContent).then(() => {
+        showToast('Copied to clipboard');
+    });
+}
+
+function downloadBibtex(btn, filename) {
+    const bibtexContent = btn.closest('.bibtex').querySelector('.bibtex-content').textContent;
+    const blob = new Blob([bibtexContent], { type: 'text/plain' });
+    const url = window.URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = filename;
+    document.body.appendChild(a);
+    a.click();
+    window.URL.revokeObjectURL(url);
+    document.body.removeChild(a);
+}
+</script>
+</p>
 </li>
 <li>
 <p><a href="https://arxiv.org/abs/1909.04746">Tighter Theory for Local SGD on Identical and Heterogeneous Data</a><br>
-The 23rd International Conference on Artificial Intelligence and Statistics (AISTATS) 2020, <em>with <a href="https://konstmish.com">Konstantin Mishschenko</a> and <a href="https://richtarik.org/index.html">Peter Richtárik</a></em>. <a href="/static/KMR2020localsgd.bib">(bibtex)</a>. Extends the workshop papers (<a href="https://arxiv.org/abs/1909.04746v1">a</a>, <a href="https://arxiv.org/abs/1909.04715">b</a>)</p>
+The 23rd International Conference on Artificial Intelligence and Statistics (AISTATS) 2020, <em>with <a href="https://konstmish.com">Konstantin Mishschenko</a> and <a href="https://richtarik.org/index.html">Peter Richtárik</a></em>. Extends the workshop papers (<a href="https://arxiv.org/abs/1909.04746v1">a</a>, <a href="https://arxiv.org/abs/1909.04715">b</a>). 
+
+<div class="bibtex-container">
+    <a class="bibtex-link" onclick="toggleBibtex(this)">[bibtex]</a>
+    <div class="bibtex" style="display: none;">
+        <div class="bibtex-header">
+            <button onclick="copyBibtex(this)" class="terminal-btn">Copy to Clipboard</button>
+            <button onclick="downloadBibtex(this, 'KMR2020localsgd.bib')" class="terminal-btn">Download .bib</button>
+            <button onclick="toggleBibtex(this.closest('.bibtex').previousElementSibling)" class="terminal-btn">Close</button>
+        </div>
+        <div class="terminal-box">
+            <pre><code class="bibtex-content">@InProceedings{KMR2020localsgd,
+  title = 	 {Tighter Theory for Local SGD on Identical and Heterogeneous Data},
+  author = 	 {Khaled, Ahmed and Mishchenko, Konstantin and Richt{\&#39;a}rik, Peter},
+  booktitle = 	 {Proceedings of the Twenty Third International Conference on Artificial Intelligence and Statistics},
+  pages = 	 {4519--4529},
+  year = 	 {2020},
+  editor = 	 {Chiappa, Silvia and Calandra, Roberto},
+  volume = 	 {108},
+  series = 	 {Proceedings of Machine Learning Research},
+  address = 	 {Online},
+  month = 	 {26--28 Aug},
+  publisher = 	 {PMLR}
+}
+</code></pre>
+        </div>
+    </div>
+</div>
+
+<style>
+.bibtex-link {
+    cursor: pointer;
+    color: #42a5f5;
+    display: inline;   
+    margin-left: 4px;  
+}
+
+.bibtex-container {
+    display: inline;   
+}
+
+.bibtex {
+    margin-top: 10px;  
+}
+
+.bibtex-header {
+    margin: 10px 0;
+    display: flex;
+    gap: 10px;
+}
+
+.terminal-btn {
+    background: #fff;
+    color: #000;
+    border: 1px solid #000;
+    padding: 5px 15px;
+    cursor: pointer;
+    font-family: monospace;
+}
+
+.terminal-btn:hover {
+    background: #eee;
+}
+
+.terminal-box {
+    background: #fff;
+    border: 1px solid #000;
+    padding: 10px;
+    margin: 5px 0;
+    width: 100ch;   
+}
+
+.terminal-box pre {
+    margin: 0;
+    white-space: pre-wrap;
+    word-break: break-all;
+    overflow-wrap: break-word;
+}
+
+
+.toast-notification {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: 1px solid #666;
+    opacity: 0;
+    transition: opacity 0.3s;
+    font-family: monospace;
+}
+
+.toast-notification.show {
+    opacity: 1;
+}
+</style>
+
+<script>
+function toggleBibtex(element) {
+    console.log('Toggle function called');
+    const bibtexDiv = element.nextElementSibling;
+    console.log('Current display:', bibtexDiv.style.display);
+    if (bibtexDiv.style.display === 'none') {
+        bibtexDiv.style.display = 'block';
+    } else {
+        bibtexDiv.style.display = 'none';
+    }
+}
+
+if (!document.getElementById('toast')) {
+    const toast = document.createElement('div');
+    toast.id = 'toast';
+    toast.className = 'toast-notification';
+    document.body.appendChild(toast);
+}
+
+function showToast(message) {
+    const toast = document.getElementById('toast');
+    toast.textContent = message;
+    toast.classList.add('show');
+    setTimeout(() => {
+        toast.classList.remove('show');
+    }, 2000);
+}
+
+function copyBibtex(btn) {
+    const bibtexContent = btn.closest('.bibtex').querySelector('.bibtex-content').textContent;
+    navigator.clipboard.writeText(bibtexContent).then(() => {
+        showToast('Copied to clipboard');
+    });
+}
+
+function downloadBibtex(btn, filename) {
+    const bibtexContent = btn.closest('.bibtex').querySelector('.bibtex-content').textContent;
+    const blob = new Blob([bibtexContent], { type: 'text/plain' });
+    const url = window.URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = filename;
+    document.body.appendChild(a);
+    a.click();
+    window.URL.revokeObjectURL(url);
+    document.body.removeChild(a);
+}
+</script>
+</p>
 </li>
 <li>
 <p><a href="https://arxiv.org/abs/2006.11573">Unified Analysis of Stochastic Gradient Methods for Composite Convex and Smooth Optimization</a><br>
-Journal version to appear in JOTA 2023, original preprint 2020, <em>with <a href="https://othmanesebbouh.github.io/">Othmane Sebbouh</a>, <a href="https://www.maths.ed.ac.uk/~s1461357/">Nicolas Loizou</a>, <a href="https://gowerrobert.github.io/">Robert M. Gower</a>, and <a href="https://richtarik.org/index.html">Peter Richtárik</a></em>. <a href="/static/KSLGR2020unified.bib">(bibtex)</a></p>
+Journal version to appear in JOTA 2023, original preprint 2020, <em>with <a href="https://othmanesebbouh.github.io/">Othmane Sebbouh</a>, <a href="https://www.maths.ed.ac.uk/~s1461357/">Nicolas Loizou</a>, <a href="https://gowerrobert.github.io/">Robert M. Gower</a>, and <a href="https://richtarik.org/index.html">Peter Richtárik</a></em>. 
+
+<div class="bibtex-container">
+    <a class="bibtex-link" onclick="toggleBibtex(this)">[bibtex]</a>
+    <div class="bibtex" style="display: none;">
+        <div class="bibtex-header">
+            <button onclick="copyBibtex(this)" class="terminal-btn">Copy to Clipboard</button>
+            <button onclick="downloadBibtex(this, 'KSLGR2020unified.bib')" class="terminal-btn">Download .bib</button>
+            <button onclick="toggleBibtex(this.closest('.bibtex').previousElementSibling)" class="terminal-btn">Close</button>
+        </div>
+        <div class="terminal-box">
+            <pre><code class="bibtex-content">@Article{KSLGR2020unifiedsgm,
+  author  = {Ahmed Khaled and Othmane Sebbouh and Nicolas Loizou and Robert M. Gower and Peter Richt{\&#39;a}rik},
+  title   = {{Unified Analysis of Stochastic Gradient Methods for Composite Convex and Smooth Optimization}},
+  journal = {arXiv preprint arXiv:2006.11573},
+  year    = {2020},
+}</code></pre>
+        </div>
+    </div>
+</div>
+
+<style>
+.bibtex-link {
+    cursor: pointer;
+    color: #42a5f5;
+    display: inline;   
+    margin-left: 4px;  
+}
+
+.bibtex-container {
+    display: inline;   
+}
+
+.bibtex {
+    margin-top: 10px;  
+}
+
+.bibtex-header {
+    margin: 10px 0;
+    display: flex;
+    gap: 10px;
+}
+
+.terminal-btn {
+    background: #fff;
+    color: #000;
+    border: 1px solid #000;
+    padding: 5px 15px;
+    cursor: pointer;
+    font-family: monospace;
+}
+
+.terminal-btn:hover {
+    background: #eee;
+}
+
+.terminal-box {
+    background: #fff;
+    border: 1px solid #000;
+    padding: 10px;
+    margin: 5px 0;
+    width: 100ch;   
+}
+
+.terminal-box pre {
+    margin: 0;
+    white-space: pre-wrap;
+    word-break: break-all;
+    overflow-wrap: break-word;
+}
+
+
+.toast-notification {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: 1px solid #666;
+    opacity: 0;
+    transition: opacity 0.3s;
+    font-family: monospace;
+}
+
+.toast-notification.show {
+    opacity: 1;
+}
+</style>
+
+<script>
+function toggleBibtex(element) {
+    console.log('Toggle function called');
+    const bibtexDiv = element.nextElementSibling;
+    console.log('Current display:', bibtexDiv.style.display);
+    if (bibtexDiv.style.display === 'none') {
+        bibtexDiv.style.display = 'block';
+    } else {
+        bibtexDiv.style.display = 'none';
+    }
+}
+
+if (!document.getElementById('toast')) {
+    const toast = document.createElement('div');
+    toast.id = 'toast';
+    toast.className = 'toast-notification';
+    document.body.appendChild(toast);
+}
+
+function showToast(message) {
+    const toast = document.getElementById('toast');
+    toast.textContent = message;
+    toast.classList.add('show');
+    setTimeout(() => {
+        toast.classList.remove('show');
+    }, 2000);
+}
+
+function copyBibtex(btn) {
+    const bibtexContent = btn.closest('.bibtex').querySelector('.bibtex-content').textContent;
+    navigator.clipboard.writeText(bibtexContent).then(() => {
+        showToast('Copied to clipboard');
+    });
+}
+
+function downloadBibtex(btn, filename) {
+    const bibtexContent = btn.closest('.bibtex').querySelector('.bibtex-content').textContent;
+    const blob = new Blob([bibtexContent], { type: 'text/plain' });
+    const url = window.URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = filename;
+    document.body.appendChild(a);
+    a.click();
+    window.URL.revokeObjectURL(url);
+    document.body.removeChild(a);
+}
+</script>
+</p>
 </li>
 <li>
 <p><a href="https://arxiv.org/abs/1912.09925">Distributed Fixed Point Methods with Compressed Iterates</a><br>
-Preprint (2019), <em>with <a href="https://github.com/Selim78">Sélim Chraibi</a>, <a href="https://www.dmitry-kovalev.com/">Dmitry Kovalev</a>, <a href="https://richtarik.org/index.html">Peter Richtárik</a>, <a href="https://adil-salim.github.io/">Adil Salim</a>, and <a href="https://mtakac.com/">Martin Takáč</a></em>. <a href="/static/CKKRST2019distributed.bib">(bibtex)</a></p>
+Preprint (2019), <em>with <a href="https://github.com/Selim78">Sélim Chraibi</a>, <a href="https://www.dmitry-kovalev.com/">Dmitry Kovalev</a>, <a href="https://richtarik.org/index.html">Peter Richtárik</a>, <a href="https://adil-salim.github.io/">Adil Salim</a>, and <a href="https://mtakac.com/">Martin Takáč</a></em>. 
+
+<div class="bibtex-container">
+    <a class="bibtex-link" onclick="toggleBibtex(this)">[bibtex]</a>
+    <div class="bibtex" style="display: none;">
+        <div class="bibtex-header">
+            <button onclick="copyBibtex(this)" class="terminal-btn">Copy to Clipboard</button>
+            <button onclick="downloadBibtex(this, 'CKKRST2019distributed.bib')" class="terminal-btn">Download .bib</button>
+            <button onclick="toggleBibtex(this.closest('.bibtex').previousElementSibling)" class="terminal-btn">Close</button>
+        </div>
+        <div class="terminal-box">
+            <pre><code class="bibtex-content">@Article{CKKRST2019distributed,
+    title={{Distributed Fixed Point Methods with Compressed Iterates}},
+    author={S\&#39;{e}lim Chraibi and Ahmed Khaled and Dmitry Kovalev and Peter Richt{\&#39;a}rik and Adil Salim and Martin Tak\&#39;{a}\v{c}},
+    journal={arXiv preprint arXiv:1912.09925},
+    year={2019}
+}
+</code></pre>
+        </div>
+    </div>
+</div>
+
+<style>
+.bibtex-link {
+    cursor: pointer;
+    color: #42a5f5;
+    display: inline;   
+    margin-left: 4px;  
+}
+
+.bibtex-container {
+    display: inline;   
+}
+
+.bibtex {
+    margin-top: 10px;  
+}
+
+.bibtex-header {
+    margin: 10px 0;
+    display: flex;
+    gap: 10px;
+}
+
+.terminal-btn {
+    background: #fff;
+    color: #000;
+    border: 1px solid #000;
+    padding: 5px 15px;
+    cursor: pointer;
+    font-family: monospace;
+}
+
+.terminal-btn:hover {
+    background: #eee;
+}
+
+.terminal-box {
+    background: #fff;
+    border: 1px solid #000;
+    padding: 10px;
+    margin: 5px 0;
+    width: 100ch;   
+}
+
+.terminal-box pre {
+    margin: 0;
+    white-space: pre-wrap;
+    word-break: break-all;
+    overflow-wrap: break-word;
+}
+
+
+.toast-notification {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: 1px solid #666;
+    opacity: 0;
+    transition: opacity 0.3s;
+    font-family: monospace;
+}
+
+.toast-notification.show {
+    opacity: 1;
+}
+</style>
+
+<script>
+function toggleBibtex(element) {
+    console.log('Toggle function called');
+    const bibtexDiv = element.nextElementSibling;
+    console.log('Current display:', bibtexDiv.style.display);
+    if (bibtexDiv.style.display === 'none') {
+        bibtexDiv.style.display = 'block';
+    } else {
+        bibtexDiv.style.display = 'none';
+    }
+}
+
+if (!document.getElementById('toast')) {
+    const toast = document.createElement('div');
+    toast.id = 'toast';
+    toast.className = 'toast-notification';
+    document.body.appendChild(toast);
+}
+
+function showToast(message) {
+    const toast = document.getElementById('toast');
+    toast.textContent = message;
+    toast.classList.add('show');
+    setTimeout(() => {
+        toast.classList.remove('show');
+    }, 2000);
+}
+
+function copyBibtex(btn) {
+    const bibtexContent = btn.closest('.bibtex').querySelector('.bibtex-content').textContent;
+    navigator.clipboard.writeText(bibtexContent).then(() => {
+        showToast('Copied to clipboard');
+    });
+}
+
+function downloadBibtex(btn, filename) {
+    const bibtexContent = btn.closest('.bibtex').querySelector('.bibtex-content').textContent;
+    const blob = new Blob([bibtexContent], { type: 'text/plain' });
+    const url = window.URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = filename;
+    document.body.appendChild(a);
+    a.click();
+    window.URL.revokeObjectURL(url);
+    document.body.removeChild(a);
+}
+</script>
+</p>
 </li>
 <li>
 <p><a href="https://acm.org/doi/abs/10.1145/3341105.3373852">Applying Fast Matrix Multiplication to Neural Networks</a><br>
-The 35th ACM/SIGAPP Symposium On Applied Computing (ACM SAC) 2020, <em>with <a href="https://scholar.google.com.eg/citations?hl=en&amp;user=YNxHCMwAAAAJ">Amir F. Atiya</a> and <a href="https://scholar.google.com.eg/citations?user=AbVIlsoAAAAJ&amp;hl=en">Ahmed H. Abdel-Gawad</a></em>. <a href="/static/KAA2020fmm.bib">(bibtex)</a></p>
+The 35th ACM/SIGAPP Symposium On Applied Computing (ACM SAC) 2020, <em>with <a href="https://scholar.google.com.eg/citations?hl=en&amp;user=YNxHCMwAAAAJ">Amir F. Atiya</a> and <a href="https://scholar.google.com.eg/citations?user=AbVIlsoAAAAJ&amp;hl=en">Ahmed H. Abdel-Gawad</a></em>. 
+
+<div class="bibtex-container">
+    <a class="bibtex-link" onclick="toggleBibtex(this)">[bibtex]</a>
+    <div class="bibtex" style="display: none;">
+        <div class="bibtex-header">
+            <button onclick="copyBibtex(this)" class="terminal-btn">Copy to Clipboard</button>
+            <button onclick="downloadBibtex(this, 'KAA2020fmm.bib')" class="terminal-btn">Download .bib</button>
+            <button onclick="toggleBibtex(this.closest('.bibtex').previousElementSibling)" class="terminal-btn">Close</button>
+        </div>
+        <div class="terminal-box">
+            <pre><code class="bibtex-content">@inproceedings{KAA2020Applyingfmm,
+  author = {Khaled, Ahmed and Atiya, Amir F. and Abdel-Gawad, Ahmed H.},
+  title = {Applying Fast Matrix Multiplication to Neural Networks},
+  year = {2020},
+  isbn = {9781450368667},
+  publisher = {Association for Computing Machinery},
+  address = {New York, NY, USA},
+  url = {https://doi.org/10.1145/3341105.3373852},
+  doi = {10.1145/3341105.3373852},
+  booktitle = {Proceedings of the 35th Annual ACM Symposium on Applied Computing},
+  pages = {1034–1037},
+  numpages = {4},
+  keywords = {neural networks, fast matrix multiplication, GPU matrix multiplication, strassen’s algorithm, winograd’s algorithm},
+  location = {Brno, Czech Republic},
+  series = {SAC ’20}
+}</code></pre>
+        </div>
+    </div>
+</div>
+
+<style>
+.bibtex-link {
+    cursor: pointer;
+    color: #42a5f5;
+    display: inline;   
+    margin-left: 4px;  
+}
+
+.bibtex-container {
+    display: inline;   
+}
+
+.bibtex {
+    margin-top: 10px;  
+}
+
+.bibtex-header {
+    margin: 10px 0;
+    display: flex;
+    gap: 10px;
+}
+
+.terminal-btn {
+    background: #fff;
+    color: #000;
+    border: 1px solid #000;
+    padding: 5px 15px;
+    cursor: pointer;
+    font-family: monospace;
+}
+
+.terminal-btn:hover {
+    background: #eee;
+}
+
+.terminal-box {
+    background: #fff;
+    border: 1px solid #000;
+    padding: 10px;
+    margin: 5px 0;
+    width: 100ch;   
+}
+
+.terminal-box pre {
+    margin: 0;
+    white-space: pre-wrap;
+    word-break: break-all;
+    overflow-wrap: break-word;
+}
+
+
+.toast-notification {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: 1px solid #666;
+    opacity: 0;
+    transition: opacity 0.3s;
+    font-family: monospace;
+}
+
+.toast-notification.show {
+    opacity: 1;
+}
+</style>
+
+<script>
+function toggleBibtex(element) {
+    console.log('Toggle function called');
+    const bibtexDiv = element.nextElementSibling;
+    console.log('Current display:', bibtexDiv.style.display);
+    if (bibtexDiv.style.display === 'none') {
+        bibtexDiv.style.display = 'block';
+    } else {
+        bibtexDiv.style.display = 'none';
+    }
+}
+
+if (!document.getElementById('toast')) {
+    const toast = document.createElement('div');
+    toast.id = 'toast';
+    toast.className = 'toast-notification';
+    document.body.appendChild(toast);
+}
+
+function showToast(message) {
+    const toast = document.getElementById('toast');
+    toast.textContent = message;
+    toast.classList.add('show');
+    setTimeout(() => {
+        toast.classList.remove('show');
+    }, 2000);
+}
+
+function copyBibtex(btn) {
+    const bibtexContent = btn.closest('.bibtex').querySelector('.bibtex-content').textContent;
+    navigator.clipboard.writeText(bibtexContent).then(() => {
+        showToast('Copied to clipboard');
+    });
+}
+
+function downloadBibtex(btn, filename) {
+    const bibtexContent = btn.closest('.bibtex').querySelector('.bibtex-content').textContent;
+    const blob = new Blob([bibtexContent], { type: 'text/plain' });
+    const url = window.URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = filename;
+    document.body.appendChild(a);
+    a.click();
+    window.URL.revokeObjectURL(url);
+    document.body.removeChild(a);
+}
+</script>
+</p>
 </li>
 </ol>
 <h1 id="workshop-papers">Workshop papers</h1>
 <ol>
 <li>
 <p><a href="https://opt-ml.org/papers/2023/paper77.pdf">A novel analysis of gradient descent under directional smoothness</a><br>
-5th Annual Workshop on Optimization for Machine Learning (OPT2023), <em>with <a href="https://cs.stanford.edu/~amishkin/">Aaron Mishkin</a>, <a href="https://www.aarondefazio.com/">Aaron Defazio</a>, and <a href="https://gowerrobert.github.io/">Robert M. Gower</a></em>. <a href="/static/dir_smoothness.bib">(bibtex)</a></p>
+5th Annual Workshop on Optimization for Machine Learning (OPT2023), <em>with <a href="https://cs.stanford.edu/~amishkin/">Aaron Mishkin</a>, <a href="https://www.aarondefazio.com/">Aaron Defazio</a>, and <a href="https://gowerrobert.github.io/">Robert M. Gower</a></em>. 
+
+<div class="bibtex-container">
+    <a class="bibtex-link" onclick="toggleBibtex(this)">[bibtex]</a>
+    <div class="bibtex" style="display: none;">
+        <div class="bibtex-header">
+            <button onclick="copyBibtex(this)" class="terminal-btn">Copy to Clipboard</button>
+            <button onclick="downloadBibtex(this, 'dir_smoothness.bib')" class="terminal-btn">Download .bib</button>
+            <button onclick="toggleBibtex(this.closest('.bibtex').previousElementSibling)" class="terminal-btn">Close</button>
+        </div>
+        <div class="terminal-box">
+            <pre><code class="bibtex-content">@inproceedings{mishkin2023novel,
+  title={A novel analysis of gradient descent under directional smoothness},
+  author={Mishkin, Aaron and Khaled, Ahmed and Defazio, Aaron and Gower, Robert M.},
+  booktitle={OPT2023: 15th Annual Workshop on Optimization for Machine Learning},
+  organization={NeurIPS},
+  year={2023},
+  url={https://opt-ml.org/papers/2023/paper77.pdf}
+}
+</code></pre>
+        </div>
+    </div>
+</div>
+
+<style>
+.bibtex-link {
+    cursor: pointer;
+    color: #42a5f5;
+    display: inline;   
+    margin-left: 4px;  
+}
+
+.bibtex-container {
+    display: inline;   
+}
+
+.bibtex {
+    margin-top: 10px;  
+}
+
+.bibtex-header {
+    margin: 10px 0;
+    display: flex;
+    gap: 10px;
+}
+
+.terminal-btn {
+    background: #fff;
+    color: #000;
+    border: 1px solid #000;
+    padding: 5px 15px;
+    cursor: pointer;
+    font-family: monospace;
+}
+
+.terminal-btn:hover {
+    background: #eee;
+}
+
+.terminal-box {
+    background: #fff;
+    border: 1px solid #000;
+    padding: 10px;
+    margin: 5px 0;
+    width: 100ch;   
+}
+
+.terminal-box pre {
+    margin: 0;
+    white-space: pre-wrap;
+    word-break: break-all;
+    overflow-wrap: break-word;
+}
+
+
+.toast-notification {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: 1px solid #666;
+    opacity: 0;
+    transition: opacity 0.3s;
+    font-family: monospace;
+}
+
+.toast-notification.show {
+    opacity: 1;
+}
+</style>
+
+<script>
+function toggleBibtex(element) {
+    console.log('Toggle function called');
+    const bibtexDiv = element.nextElementSibling;
+    console.log('Current display:', bibtexDiv.style.display);
+    if (bibtexDiv.style.display === 'none') {
+        bibtexDiv.style.display = 'block';
+    } else {
+        bibtexDiv.style.display = 'none';
+    }
+}
+
+if (!document.getElementById('toast')) {
+    const toast = document.createElement('div');
+    toast.id = 'toast';
+    toast.className = 'toast-notification';
+    document.body.appendChild(toast);
+}
+
+function showToast(message) {
+    const toast = document.getElementById('toast');
+    toast.textContent = message;
+    toast.classList.add('show');
+    setTimeout(() => {
+        toast.classList.remove('show');
+    }, 2000);
+}
+
+function copyBibtex(btn) {
+    const bibtexContent = btn.closest('.bibtex').querySelector('.bibtex-content').textContent;
+    navigator.clipboard.writeText(bibtexContent).then(() => {
+        showToast('Copied to clipboard');
+    });
+}
+
+function downloadBibtex(btn, filename) {
+    const bibtexContent = btn.closest('.bibtex').querySelector('.bibtex-content').textContent;
+    const blob = new Blob([bibtexContent], { type: 'text/plain' });
+    const url = window.URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = filename;
+    document.body.appendChild(a);
+    a.click();
+    window.URL.revokeObjectURL(url);
+    document.body.removeChild(a);
+}
+</script>
+</p>
 </li>
 <li>
 <p><a href="https://arxiv.org/abs/1909.04746v1">Better Communication Complexity for Local SGD</a><br>
-Oral presentation at the NeurIPS 2019 Workshop on Federated Learning for Data Privacy and Confidentiality, <em>with <a href="https://konstmish.com">Konstantin Mishschenko</a> and <a href="https://richtarik.org/index.html">Peter Richtárik</a></em>. <a href="/static/KMR2019localsgd.bib">(bibtex)</a></p>
+Oral presentation at the NeurIPS 2019 Workshop on Federated Learning for Data Privacy and Confidentiality, <em>with <a href="https://konstmish.com">Konstantin Mishschenko</a> and <a href="https://richtarik.org/index.html">Peter Richtárik</a></em>. 
+
+<div class="bibtex-container">
+    <a class="bibtex-link" onclick="toggleBibtex(this)">[bibtex]</a>
+    <div class="bibtex" style="display: none;">
+        <div class="bibtex-header">
+            <button onclick="copyBibtex(this)" class="terminal-btn">Copy to Clipboard</button>
+            <button onclick="downloadBibtex(this, 'KMR2019localsgd.bib')" class="terminal-btn">Download .bib</button>
+            <button onclick="toggleBibtex(this.closest('.bibtex').previousElementSibling)" class="terminal-btn">Close</button>
+        </div>
+        <div class="terminal-box">
+            <pre><code class="bibtex-content">@Article{KMR2019localsgd,
+  author  = {Ahmed Khaled and Konstantin Mishchenko and Peter Richt{\&#39;a}rik},
+  title   = {{Better Communication Complexity for Local SGD}},
+  journal = {arXiv preprint arXiv:1909.04746v1},
+  year    = {2019},
+}</code></pre>
+        </div>
+    </div>
+</div>
+
+<style>
+.bibtex-link {
+    cursor: pointer;
+    color: #42a5f5;
+    display: inline;   
+    margin-left: 4px;  
+}
+
+.bibtex-container {
+    display: inline;   
+}
+
+.bibtex {
+    margin-top: 10px;  
+}
+
+.bibtex-header {
+    margin: 10px 0;
+    display: flex;
+    gap: 10px;
+}
+
+.terminal-btn {
+    background: #fff;
+    color: #000;
+    border: 1px solid #000;
+    padding: 5px 15px;
+    cursor: pointer;
+    font-family: monospace;
+}
+
+.terminal-btn:hover {
+    background: #eee;
+}
+
+.terminal-box {
+    background: #fff;
+    border: 1px solid #000;
+    padding: 10px;
+    margin: 5px 0;
+    width: 100ch;   
+}
+
+.terminal-box pre {
+    margin: 0;
+    white-space: pre-wrap;
+    word-break: break-all;
+    overflow-wrap: break-word;
+}
+
+
+.toast-notification {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: 1px solid #666;
+    opacity: 0;
+    transition: opacity 0.3s;
+    font-family: monospace;
+}
+
+.toast-notification.show {
+    opacity: 1;
+}
+</style>
+
+<script>
+function toggleBibtex(element) {
+    console.log('Toggle function called');
+    const bibtexDiv = element.nextElementSibling;
+    console.log('Current display:', bibtexDiv.style.display);
+    if (bibtexDiv.style.display === 'none') {
+        bibtexDiv.style.display = 'block';
+    } else {
+        bibtexDiv.style.display = 'none';
+    }
+}
+
+if (!document.getElementById('toast')) {
+    const toast = document.createElement('div');
+    toast.id = 'toast';
+    toast.className = 'toast-notification';
+    document.body.appendChild(toast);
+}
+
+function showToast(message) {
+    const toast = document.getElementById('toast');
+    toast.textContent = message;
+    toast.classList.add('show');
+    setTimeout(() => {
+        toast.classList.remove('show');
+    }, 2000);
+}
+
+function copyBibtex(btn) {
+    const bibtexContent = btn.closest('.bibtex').querySelector('.bibtex-content').textContent;
+    navigator.clipboard.writeText(bibtexContent).then(() => {
+        showToast('Copied to clipboard');
+    });
+}
+
+function downloadBibtex(btn, filename) {
+    const bibtexContent = btn.closest('.bibtex').querySelector('.bibtex-content').textContent;
+    const blob = new Blob([bibtexContent], { type: 'text/plain' });
+    const url = window.URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = filename;
+    document.body.appendChild(a);
+    a.click();
+    window.URL.revokeObjectURL(url);
+    document.body.removeChild(a);
+}
+</script>
+</p>
 </li>
 <li>
 <p><a href="https://arxiv.org/abs/1909.04715">First Analysis of Local GD on Heterogenous Data</a><br>
-NeurIPS 2019 Workshop on Federated Learning for Data Privacy and Confidentiality, <em>with <a href="https://konstmish.com">Konstantin Mishschenko</a> and <a href="https://richtarik.org/index.html">Peter Richtárik</a></em>. <a href="/static/KMR2019localgd.bib">(bibtex)</a></p>
+NeurIPS 2019 Workshop on Federated Learning for Data Privacy and Confidentiality, <em>with <a href="https://konstmish.com">Konstantin Mishschenko</a> and <a href="https://richtarik.org/index.html">Peter Richtárik</a></em>. 
+
+<div class="bibtex-container">
+    <a class="bibtex-link" onclick="toggleBibtex(this)">[bibtex]</a>
+    <div class="bibtex" style="display: none;">
+        <div class="bibtex-header">
+            <button onclick="copyBibtex(this)" class="terminal-btn">Copy to Clipboard</button>
+            <button onclick="downloadBibtex(this, 'KMR2019localgd.bib')" class="terminal-btn">Download .bib</button>
+            <button onclick="toggleBibtex(this.closest('.bibtex').previousElementSibling)" class="terminal-btn">Close</button>
+        </div>
+        <div class="terminal-box">
+            <pre><code class="bibtex-content">@Article{KMR2019localgd,
+  author  = {Ahmed Khaled and Konstantin Mishchenko and Peter Richt{\&#39;a}rik},
+  title   = {{First Analysis of Local GD on Heterogeneous Data}},
+  journal = {arXiv preprint arXiv:1909.04715},
+  year    = {2019},
+}</code></pre>
+        </div>
+    </div>
+</div>
+
+<style>
+.bibtex-link {
+    cursor: pointer;
+    color: #42a5f5;
+    display: inline;   
+    margin-left: 4px;  
+}
+
+.bibtex-container {
+    display: inline;   
+}
+
+.bibtex {
+    margin-top: 10px;  
+}
+
+.bibtex-header {
+    margin: 10px 0;
+    display: flex;
+    gap: 10px;
+}
+
+.terminal-btn {
+    background: #fff;
+    color: #000;
+    border: 1px solid #000;
+    padding: 5px 15px;
+    cursor: pointer;
+    font-family: monospace;
+}
+
+.terminal-btn:hover {
+    background: #eee;
+}
+
+.terminal-box {
+    background: #fff;
+    border: 1px solid #000;
+    padding: 10px;
+    margin: 5px 0;
+    width: 100ch;   
+}
+
+.terminal-box pre {
+    margin: 0;
+    white-space: pre-wrap;
+    word-break: break-all;
+    overflow-wrap: break-word;
+}
+
+
+.toast-notification {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: 1px solid #666;
+    opacity: 0;
+    transition: opacity 0.3s;
+    font-family: monospace;
+}
+
+.toast-notification.show {
+    opacity: 1;
+}
+</style>
+
+<script>
+function toggleBibtex(element) {
+    console.log('Toggle function called');
+    const bibtexDiv = element.nextElementSibling;
+    console.log('Current display:', bibtexDiv.style.display);
+    if (bibtexDiv.style.display === 'none') {
+        bibtexDiv.style.display = 'block';
+    } else {
+        bibtexDiv.style.display = 'none';
+    }
+}
+
+if (!document.getElementById('toast')) {
+    const toast = document.createElement('div');
+    toast.id = 'toast';
+    toast.className = 'toast-notification';
+    document.body.appendChild(toast);
+}
+
+function showToast(message) {
+    const toast = document.getElementById('toast');
+    toast.textContent = message;
+    toast.classList.add('show');
+    setTimeout(() => {
+        toast.classList.remove('show');
+    }, 2000);
+}
+
+function copyBibtex(btn) {
+    const bibtexContent = btn.closest('.bibtex').querySelector('.bibtex-content').textContent;
+    navigator.clipboard.writeText(bibtexContent).then(() => {
+        showToast('Copied to clipboard');
+    });
+}
+
+function downloadBibtex(btn, filename) {
+    const bibtexContent = btn.closest('.bibtex').querySelector('.bibtex-content').textContent;
+    const blob = new Blob([bibtexContent], { type: 'text/plain' });
+    const url = window.URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = filename;
+    document.body.appendChild(a);
+    a.click();
+    window.URL.revokeObjectURL(url);
+    document.body.removeChild(a);
+}
+</script>
+</p>
 </li>
 <li>
 <p><a href="https://arxiv.org/abs/1909.04716">Gradient Descent with Compressed Iterates</a><br>
-NeurIPS 2019 Workshop on Federated Learning for Data Privacy and Confidentiality, <em>with <a href="https://richtarik.org/index.html">Peter Richtárik</a></em>. <a href="/static/KR2019gdci.bib">(bibtex)</a></p>
+NeurIPS 2019 Workshop on Federated Learning for Data Privacy and Confidentiality, <em>with <a href="https://richtarik.org/index.html">Peter Richtárik</a></em>. 
+
+<div class="bibtex-container">
+    <a class="bibtex-link" onclick="toggleBibtex(this)">[bibtex]</a>
+    <div class="bibtex" style="display: none;">
+        <div class="bibtex-header">
+            <button onclick="copyBibtex(this)" class="terminal-btn">Copy to Clipboard</button>
+            <button onclick="downloadBibtex(this, 'KR2019gdci.bib')" class="terminal-btn">Download .bib</button>
+            <button onclick="toggleBibtex(this.closest('.bibtex').previousElementSibling)" class="terminal-btn">Close</button>
+        </div>
+        <div class="terminal-box">
+            <pre><code class="bibtex-content">@Article{KR2019GDCI,
+  author      = {Khaled, Ahmed and Richt\&#39;{a}rik, Peter},
+  title       = {{Gradient Descent with Compressed Iterates}},
+  journal     = {arXiv preprint arXiv:1909.04716},
+  year        = {2019}
+}</code></pre>
+        </div>
+    </div>
+</div>
+
+<style>
+.bibtex-link {
+    cursor: pointer;
+    color: #42a5f5;
+    display: inline;   
+    margin-left: 4px;  
+}
+
+.bibtex-container {
+    display: inline;   
+}
+
+.bibtex {
+    margin-top: 10px;  
+}
+
+.bibtex-header {
+    margin: 10px 0;
+    display: flex;
+    gap: 10px;
+}
+
+.terminal-btn {
+    background: #fff;
+    color: #000;
+    border: 1px solid #000;
+    padding: 5px 15px;
+    cursor: pointer;
+    font-family: monospace;
+}
+
+.terminal-btn:hover {
+    background: #eee;
+}
+
+.terminal-box {
+    background: #fff;
+    border: 1px solid #000;
+    padding: 10px;
+    margin: 5px 0;
+    width: 100ch;   
+}
+
+.terminal-box pre {
+    margin: 0;
+    white-space: pre-wrap;
+    word-break: break-all;
+    overflow-wrap: break-word;
+}
+
+
+.toast-notification {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: 1px solid #666;
+    opacity: 0;
+    transition: opacity 0.3s;
+    font-family: monospace;
+}
+
+.toast-notification.show {
+    opacity: 1;
+}
+</style>
+
+<script>
+function toggleBibtex(element) {
+    console.log('Toggle function called');
+    const bibtexDiv = element.nextElementSibling;
+    console.log('Current display:', bibtexDiv.style.display);
+    if (bibtexDiv.style.display === 'none') {
+        bibtexDiv.style.display = 'block';
+    } else {
+        bibtexDiv.style.display = 'none';
+    }
+}
+
+if (!document.getElementById('toast')) {
+    const toast = document.createElement('div');
+    toast.id = 'toast';
+    toast.className = 'toast-notification';
+    document.body.appendChild(toast);
+}
+
+function showToast(message) {
+    const toast = document.getElementById('toast');
+    toast.textContent = message;
+    toast.classList.add('show');
+    setTimeout(() => {
+        toast.classList.remove('show');
+    }, 2000);
+}
+
+function copyBibtex(btn) {
+    const bibtexContent = btn.closest('.bibtex').querySelector('.bibtex-content').textContent;
+    navigator.clipboard.writeText(bibtexContent).then(() => {
+        showToast('Copied to clipboard');
+    });
+}
+
+function downloadBibtex(btn, filename) {
+    const bibtexContent = btn.closest('.bibtex').querySelector('.bibtex-content').textContent;
+    const blob = new Blob([bibtexContent], { type: 'text/plain' });
+    const url = window.URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = filename;
+    document.body.appendChild(a);
+    a.click();
+    window.URL.revokeObjectURL(url);
+    document.body.removeChild(a);
+}
+</script>
+</p>
 </li>
 </ol>
 <h1 id="talks">Talks</h1>
 <ol>
 <li><a href="https://sites.google.com/view/one-world-seminar-series-flow/archive?authuser=0#h.azhfwca3oax9">On the Convergence of Local SGD on Identical and Heterogeneous Data</a><br>
-Federated Learning One World Seminar (2020). <a href="https://www.youtube.com/watch?v=6ThWeKQyp8k&amp;feature=emb_title">Video</a> and <a href="/static/FLOW_LocalSGD.pdf">Slides</a></li>
+Federated Learning One World Seminar (2020). <a href="https://www.youtube.com/watch?v=6ThWeKQyp8k&amp;feature=emb_title">Video</a> and <a href="/pdfs/FLOW_LocalSGD.pdf">Slides</a></li>
 </ol>
 
 

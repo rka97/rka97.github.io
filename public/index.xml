@@ -6,7 +6,21 @@
     <description>Recent content on Ahmed&#39;s corner</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate></lastBuildDate>
+    <lastBuildDate>Mon, 23 Dec 2024 01:22:42 -0500</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>The future</title>
+      <link>http://localhost:1313/blog/posts/the_future/</link>
+      <pubDate>Mon, 23 Dec 2024 01:22:42 -0500</pubDate>
+      <guid>http://localhost:1313/blog/posts/the_future/</guid>
+      <description>&lt;p&gt;It is the future.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Useless heralds of the doomsday</title>
+      <link>http://localhost:1313/blog/useless_heralds/</link>
+      <pubDate>Mon, 23 Dec 2024 01:22:42 -0500</pubDate>
+      <guid>http://localhost:1313/blog/useless_heralds/</guid>
+      <description>&lt;p&gt;We are at an exciting point in time&amp;ndash; we might be observing, potentially, the emergence of a so-called AGI, an Artificial General Intelligene. If you believe benchmarks like SWE-Bench for software engineering, GPQA for Ph.D.-level science questions, or EpochAI Frontier Math (for math, duh), then there are now models (like OpenAI&amp;rsquo;s o3) which are quickly approaching human performance. We have no reason to believe this trajectory will not continue. On the contrary, it is &lt;em&gt;accelerating.&lt;/em&gt; My personal opinion is that artificial intelligence is quite weird and alien, that it will soon (&amp;lt;3 years) overtake the best humans on many tasks (including math) but will still fail in ways that, to us, will be quite perplexing. If this trajectory does not continue, and for some reason human-level performance in reasoning-based tasks remains outside the ability of machine learning models, then this post will be irrelevant.&lt;/p&gt;</description>
+    </item>
   </channel>
 </rss>
