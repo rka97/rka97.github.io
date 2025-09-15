@@ -13,6 +13,8 @@ In the past, I interned at Google DeepMind in 2024 and at Meta AI research in su
 
 # Publications and Preprints
 
+1. [Understanding Outer Optimizers in Local SGD: Learning Rates, Momentum, and Acceleration](https://arxiv.org/abs/2509.10439) arXiv preprint, *with [Satyen Kale](https://www.satyenkale.com), [Arthur Douillard](https://arthurdouillard.com/), [Chi Jin](https://sites.google.com/view/cjin/home), [Rob Fergus](https://cs.nyu.edu/~fergus/pmwiki/pmwiki.php), and [Manzil Zaheer](http://manzil.ml/). {{<bibtex filename="outerlr.bib">}}
+
 2. [Directional Smoothness and Gradient Methods: Convergence and Adaptivity](https://arxiv.org/abs/2403.04081)  
    NeurIPS 2024, *with [Aaron Mishkin](https://cs.stanford.edu/~amishkin/), [Yuanhao Wang](https://www.cs.princeton.edu/~yuanhao/), [Aaron Defazio](https://www.aarondefazio.com/), and [Robert M. Gower](https://gowerrobert.github.io/)*. {{< bibtex filename="dirsmooth.bib" >}}
 
