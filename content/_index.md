@@ -14,7 +14,7 @@ In the past, I have previously interned at Amazon AWS AI, Google DeepMind, and a
 # Publications and Preprints
 
 1. [MuonBP: Faster Muon via Block-Periodic Orthogonalization](https://arxiv.org/abs/2510.16981)
-   arXiv preprint, *with [Kaan Ozkara](https://scholar.google.com/citations?user=W-JoHj0AAAAJ&hl=en)*, [Tao Yu](https://ydtydr.github.io/), [Mingyi Hong](https://people.ece.umn.edu/~mhong/mingyi.html), and [Youngsuk Park](https://youngsuk0723.github.io/). {{<bibtex filename="muonbp.bib"}}
+   arXiv preprint, *with [Kaan Ozkara](https://scholar.google.com/citations?user=W-JoHj0AAAAJ&hl=en)*, [Tao Yu](https://ydtydr.github.io/), [Mingyi Hong](https://people.ece.umn.edu/~mhong/mingyi.html), and [Youngsuk Park](https://youngsuk0723.github.io/). {{<bibtex filename="muonbp.bib">}}
 
 
 1. [Understanding Outer Optimizers in Local SGD: Learning Rates, Momentum, and Acceleration](https://arxiv.org/abs/2509.10439)
