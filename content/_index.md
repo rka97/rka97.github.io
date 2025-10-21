@@ -8,13 +8,18 @@
 Welcome to my tiny corner of the internet! I'm Ahmed, I work on optimization and machine learning. I'm a fourth-year Ph.D. student in the ECE department at Princeton University, advised by Prof. [Chi Jin](https://sites.google.com/view/cjin/home). I am interested in optimization in machine learning, and in federated learning.
 
 
-In the past, I interned at Google DeepMind in 2024 and at Meta AI research in summer 2023. Before that, I interned in the group of Prof. [Peter Richtárik](https://richtarik.org/index.html) at [KAUST](https://www.kaust.edu.sa/en/) in the summers of 2019/2020, where I worked on the distributed & stochastic optimization. Prior to that, I did some research on accelerating the training of neural networks by with Prof. [Amir Atiya](https://scholar.google.com.eg/citations?user=YNxHCMwAAAAJ&hl=en).
+In the past, I have previously interned at Amazon AWS AI, Google DeepMind, and at Meta FAIR. Before that, I interned in the group of Prof. [Peter Richtárik](https://richtarik.org/index.html) at [KAUST](https://www.kaust.edu.sa/en/) in the summers of 2019/2020, where I worked on the distributed & stochastic optimization. In undergrad, I did some research on accelerating the training of neural networks by with Prof. [Amir Atiya](https://scholar.google.com.eg/citations?user=YNxHCMwAAAAJ&hl=en).
 
 
 # Publications and Preprints
 
+1. [MuonBP: Faster Muon via Block-Periodic Orthogonalization](https://arxiv.org/abs/2510.16981)
+   arXiv preprint, *with [Kaan Ozkara](https://scholar.google.com/citations?user=W-JoHj0AAAAJ&hl=en)*, [Tao Yu](https://ydtydr.github.io/), [Mingyi Hong](https://people.ece.umn.edu/~mhong/mingyi.html), and [Youngsuk Park](https://youngsuk0723.github.io/). {{<bibtex filename="muonbp.bib"}}
+
+
 1. [Understanding Outer Optimizers in Local SGD: Learning Rates, Momentum, and Acceleration](https://arxiv.org/abs/2509.10439)
-   arXiv preprint, *with [Satyen Kale](https://www.satyenkale.com), [Arthur Douillard](https://arthurdouillard.com/), [Chi Jin](https://sites.google.com/view/cjin/home), [Rob Fergus](https://cs.nyu.edu/~fergus/pmwiki/pmwiki.php), and [Manzil Zaheer](http://manzil.ml/)*. {{<bibtex filename="outerlr.bib">}}
+   arXiv preprint, *with [Satyen Kale](https://www.satyenkale.com), [Arthur Douillard](https://arthurdouillard.com/), [Chi Jin](https://sites.google.com/view/cjin/home), [Rob Fergus](https://cs.nyu.edu/~fergus/pmwiki/pmwiki.php), and [Manzil Zaheer](http://manzil.ml/)*. To appear in NeurIPS 2025. {{<bibtex filename="outerlr.bib">}}
+
 
 2. [Directional Smoothness and Gradient Methods: Convergence and Adaptivity](https://arxiv.org/abs/2403.04081)  
    NeurIPS 2024, *with [Aaron Mishkin](https://cs.stanford.edu/~amishkin/), [Yuanhao Wang](https://www.cs.princeton.edu/~yuanhao/), [Aaron Defazio](https://www.aarondefazio.com/), and [Robert M. Gower](https://gowerrobert.github.io/)*. {{< bibtex filename="dirsmooth.bib" >}}
