@@ -6,9 +6,8 @@
 
 [ahmed.khaled@princeton.edu](mailto:ahmed.khaled@princeton.edu)
 
-Welcome to my tiny corner of the internet! I'm Ahmed, I work on optimization and
-machine learning. I'm a research scientist at Google DeepMind and a Ph.D.
-candidate at Princeton University, advised by Prof.
+Hello! I'm Ahmed, I work on optimization and machine learning. I'm a research scientist at Google DeepMind. Prior to that, 
+I got my Ph.D. from Princeton University, advised by Prof.
 [Chi Jin](https://sites.google.com/view/cjin/home). I am interested in
 optimization in machine learning, and in federated learning.
 
@@ -22,12 +21,21 @@ research on accelerating the training of neural networks by with Prof.
 
 # Publications and Preprints
 
+1.  [Muon Does Not Converge on Convex Lipschitz Functions](https://arxiv.org/abs/2605.08980)
+    arXiv preprint arXiv:2605.08980, 2026, *with
+    [Tetiana Parshakova](https://parshakova.github.io/)*,
+    [Michael Crawshaw](https://mtcrawshaw.github.io/),
+    [Guillaume Garrigos](https://guillaume-garrigos.com/), and
+    [Robert M. Gower](https://gowerrobert.github.io/).
+    {{<bibtex filename="muon_convex_lipschitz.bib">}}
+
+
 1.  [MuonBP: Faster Muon via Block-Periodic Orthogonalization](https://arxiv.org/abs/2510.16981)
-    arXiv preprint, *with
+    ICLR 2026, *with
     [Kaan Ozkara](https://scholar.google.com/citations?user=W-JoHj0AAAAJ&hl=en)*,
     [Tao Yu](https://ydtydr.github.io/),
     [Mingyi Hong](https://people.ece.umn.edu/~mhong/mingyi.html), and
-    [Youngsuk Park](https://youngsuk0723.github.io/). To appear in ICLR 2026.
+    [Youngsuk Park](https://youngsuk0723.github.io/).
     {{<bibtex filename="muonbp.bib">}}
 
 2.  [Understanding Outer Optimizers in Local SGD: Learning Rates, Momentum, and
@@ -46,7 +54,7 @@ research on accelerating the training of neural networks by with Prof.
     [Robert M. Gower](https://gowerrobert.github.io/)*. {{< bibtex
     filename="dirsmooth.bib" >}}
 
-4.  [The Road Less Scheduled](https://arxiv.org/abs/2405.15682) \
+4.  [The Road Less Scheduled](https://arxiv.org/abs/2405.15682) \ 
     NeurIPS 2024 Oral, with [Aaron Defazio](https://www.aarondefazio.com/),
     [Xingyu (Alice) Yang](https://x.com/alicey_ang),
     [Harsh Mehta](https://scholar.google.com/citations?user=murJPNoAAAAJ&hl=en),
