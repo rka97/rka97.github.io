@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-us">
 <head>
-	<meta name="generator" content="Hugo 0.150.1">
+	<meta name="generator" content="Hugo 0.160.1">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Ahmed&#39;s corner/</title>
@@ -60,9 +60,8 @@
     <img src="images/photo51.jpeg" style="border-radius:5%" alt="Photo of me" />
 </figure>
 <p><a href="mailto:ahmed.khaled@princeton.edu">ahmed.khaled@princeton.edu</a></p>
-<p>Welcome to my tiny corner of the internet! I&rsquo;m Ahmed, I work on optimization and
-machine learning. I&rsquo;m a research scientist at Google DeepMind and a Ph.D.
-candidate at Princeton University, advised by Prof.
+<p>Hello! I&rsquo;m Ahmed, I work on optimization and machine learning. I&rsquo;m a research scientist at Google DeepMind. Prior to that,
+I got my Ph.D. from Princeton University, advised by Prof.
 <a href="https://sites.google.com/view/cjin/home">Chi Jin</a>. I am interested in
 optimization in machine learning, and in federated learning.</p>
 <p>In the past, I have previously interned at Amazon AWS AI, Google DeepMind, and
@@ -75,12 +74,161 @@ research on accelerating the training of neural networks by with Prof.
 <h1 id="publications-and-preprints">Publications and Preprints</h1>
 <ol>
 <li>
+<p><a href="https://arxiv.org/abs/2605.08980">Muon Does Not Converge on Convex Lipschitz Functions</a>
+arXiv preprint arXiv:2605.08980, 2026, <em>with
+<a href="https://parshakova.github.io/">Tetiana Parshakova</a></em>,
+<a href="https://mtcrawshaw.github.io/">Michael Crawshaw</a>,
+<a href="https://guillaume-garrigos.com/">Guillaume Garrigos</a>, and
+<a href="https://gowerrobert.github.io/">Robert M. Gower</a>.
+
+    
+    <div class="bibtex-container">
+        <a class="bibtex-link" onclick="toggleBibtex(this)">[bibtex]</a>
+        <div class="bibtex" style="display: none;">
+            <div class="bibtex-header">
+                <button onclick="copyBibtex(this)" class="terminal-btn">Copy to Clipboard</button>
+                <button onclick="downloadBibtex(this, 'muon_convex_lipschitz.bib')" class="terminal-btn">Download .bib</button>
+                <button onclick="toggleBibtex(this.closest('.bibtex').previousElementSibling)" class="terminal-btn">Close</button>
+            </div>
+            <div class="terminal-box">
+                <pre><code class="bibtex-content">@article{parshakova26_muon,
+          title={{Muon} does not converge on Convex Lipschitz functions},
+          author={Tetiana Parshakova and Ahmed Khaled and Michael Crawshaw and Guillaume Garrigos and Robert M. Gower},
+          year={2026},
+          journal={arXiv preprint arXiv:2605.08980},
+          url={https://arxiv.org/abs/2605.08980},
+    }
+    </code></pre>
+            </div>
+        </div>
+    </div>
+    
+    <style>
+    .bibtex-link {
+        cursor: pointer;
+        color: #42a5f5;
+        display: inline;   
+        margin-left: 4px;  
+    }
+    
+    .bibtex-container {
+        display: inline;   
+    }
+    
+    .bibtex {
+        margin-top: 10px;  
+    }
+    
+    .bibtex-header {
+        margin: 10px 0;
+        display: flex;
+        gap: 10px;
+    }
+    
+    .terminal-btn {
+        background: #fff;
+        color: #000;
+        border: 1px solid #000;
+        padding: 5px 15px;
+        cursor: pointer;
+        font-family: monospace;
+    }
+    
+    .terminal-btn:hover {
+        background: #eee;
+    }
+    
+    .terminal-box {
+        background: #fff;
+        border: 1px solid #000;
+        padding: 10px;
+        margin: 5px 0;
+        width: 100ch;   
+    }
+    
+    .terminal-box pre {
+        margin: 0;
+        white-space: pre-wrap;
+        word-break: break-all;
+        overflow-wrap: break-word;
+    }
+    
+    
+    .toast-notification {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background: #333;
+        color: #fff;
+        padding: 10px 20px;
+        border: 1px solid #666;
+        opacity: 0;
+        transition: opacity 0.3s;
+        font-family: monospace;
+    }
+    
+    .toast-notification.show {
+        opacity: 1;
+    }
+    </style>
+    
+    <script>
+    function toggleBibtex(element) {
+        console.log('Toggle function called');
+        const bibtexDiv = element.nextElementSibling;
+        console.log('Current display:', bibtexDiv.style.display);
+        if (bibtexDiv.style.display === 'none') {
+            bibtexDiv.style.display = 'block';
+        } else {
+            bibtexDiv.style.display = 'none';
+        }
+    }
+    
+    if (!document.getElementById('toast')) {
+        const toast = document.createElement('div');
+        toast.id = 'toast';
+        toast.className = 'toast-notification';
+        document.body.appendChild(toast);
+    }
+    
+    function showToast(message) {
+        const toast = document.getElementById('toast');
+        toast.textContent = message;
+        toast.classList.add('show');
+        setTimeout(() => {
+            toast.classList.remove('show');
+        }, 2000);
+    }
+    
+    function copyBibtex(btn) {
+        const bibtexContent = btn.closest('.bibtex').querySelector('.bibtex-content').textContent;
+        navigator.clipboard.writeText(bibtexContent).then(() => {
+            showToast('Copied to clipboard');
+        });
+    }
+    
+    function downloadBibtex(btn, filename) {
+        const bibtexContent = btn.closest('.bibtex').querySelector('.bibtex-content').textContent;
+        const blob = new Blob([bibtexContent], { type: 'text/plain' });
+        const url = window.URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = filename;
+        document.body.appendChild(a);
+        a.click();
+        window.URL.revokeObjectURL(url);
+        document.body.removeChild(a);
+    }
+    </script>
+</p>
+</li>
+<li>
 <p><a href="https://arxiv.org/abs/2510.16981">MuonBP: Faster Muon via Block-Periodic Orthogonalization</a>
-arXiv preprint, <em>with
+ICLR 2026, <em>with
 <a href="https://scholar.google.com/citations?user=W-JoHj0AAAAJ&amp;hl=en">Kaan Ozkara</a></em>,
 <a href="https://ydtydr.github.io/">Tao Yu</a>,
 <a href="https://people.ece.umn.edu/~mhong/mingyi.html">Mingyi Hong</a>, and
-<a href="https://youngsuk0723.github.io/">Youngsuk Park</a>. To appear in ICLR 2026.
+<a href="https://youngsuk0723.github.io/">Youngsuk Park</a>.
 
     
     <div class="bibtex-container">
@@ -524,7 +672,7 @@ function downloadBibtex(btn, filename) {
 </p>
 </li>
 <li>
-<p><a href="https://arxiv.org/abs/2405.15682">The Road Less Scheduled</a> <br>
+<p><a href="https://arxiv.org/abs/2405.15682">The Road Less Scheduled</a> \
 NeurIPS 2024 Oral, with <a href="https://www.aarondefazio.com/">Aaron Defazio</a>,
 <a href="https://x.com/alicey_ang">Xingyu (Alice) Yang</a>,
 <a href="https://scholar.google.com/citations?user=murJPNoAAAAJ&amp;hl=en">Harsh Mehta</a>,
